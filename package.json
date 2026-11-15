@@ -2,7 +2,7 @@
   "name": "vasthu-kala-billing",
   "version": "1.0.0",
   "private": true,
-  "scripts": { "prepare-assets": "node scripts/prepare.js" },
+  "scripts": { "prepare-assets": "node prepare.js" },
   "dependencies": {
     "@capacitor/android": "^6.2.0",
     "@capacitor/cli": "^6.2.0",

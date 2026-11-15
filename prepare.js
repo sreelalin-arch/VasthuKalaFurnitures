@@ -1,7 +1,7 @@
 // Copies the PDF libraries and fonts from node_modules into www/lib so the app works offline.
 const fs = require('fs'), path = require('path');
-const lib = path.join(__dirname, '..', 'www', 'lib');
-const nm = p => path.join(__dirname, '..', 'node_modules', p);
+const lib = path.join(__dirname, 'www', 'lib');
+const nm = p => path.join(__dirname, 'node_modules', p);
 fs.mkdirSync(path.join(lib, 'fonts'), { recursive: true });
 fs.copyFileSync(nm('html2canvas/dist/html2canvas.min.js'), path.join(lib, 'html2canvas.min.js'));
 fs.copyFileSync(nm('jspdf/dist/jspdf.umd.min.js'), path.join(lib, 'jspdf.umd.min.js'));
