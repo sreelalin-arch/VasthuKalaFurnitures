@@ -1,6 +1,0 @@
-{
-  "appId": "com.vasthukala.billing",
-  "appName": "Vasthu Kala Billing",
-  "webDir": "www",
-  "server": { "androidScheme": "https" }
-}
