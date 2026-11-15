@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vasthu Kala Wood Industry – Bills & Quotations</title>
+<link href="lib/fonts.css" rel="stylesheet">
+<script src="lib/html2canvas.min.js"></script>
+<script src="lib/jspdf.umd.min.js"></script>
+<style>
+:root{--bg:#e4e4e4;--bar:#1c1c1c;--bar-t:#f2f2f2;--card:#fff;--ink:#111;--mute:#666;--line:#d0d0d0;--accent:#111;--accent-t:#fff;--field:#fafafa;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121212;--bar:#000;--card:#1e1e1e;--ink:#eee;--mute:#999;--line:#333;--accent:#f2f2f2;--accent-t:#111;--field:#262626}}
+:root[data-theme="dark"]{--bg:#121212;--bar:#000;--card:#1e1e1e;--ink:#eee;--mute:#999;--line:#333;--accent:#f2f2f2;--accent-t:#111;--field:#262626}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Public Sans",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bar);z-index:10}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bar);color:var(--bar-t);display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 14px}
+.bar h1{font:800 17px Bitter,Georgia,serif;margin:0 auto 0 0}
+.seg{display:flex;border:1px solid #666;border-radius:6px;overflow:hidden}
+.seg button{background:none;border:0;color:var(--bar-t);padding:7px 12px;font:inherit;cursor:pointer}
+.seg button.on{background:#f2f2f2;color:#111;font-weight:600}
+.btn{background:#f2f2f2;color:#111;border:0;border-radius:6px;padding:8px 13px;font:600 14px "Public Sans",system-ui,sans-serif;cursor:pointer}
+.btn.ghost{background:none;color:inherit;border:1px solid currentColor}
+main .btn{background:var(--accent);color:var(--accent-t)}main .btn.ghost{background:none;color:var(--ink)}
+.btn:disabled{opacity:.5}
+.btn:focus-visible,.seg button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #2d6cdf;outline-offset:1px}
+main{max-width:920px;margin:14px auto;padding:0 10px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.opts{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:10px 14px;margin-bottom:10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.opts label{font-size:12px;color:var(--mute);display:block}
+.opts input,.opts select{width:100%;background:var(--field);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:6px 8px;font:inherit}
+.opts .ck{display:flex;align-items:center;gap:8px;padding-top:18px;color:var(--ink);font-size:14px}.opts .ck input{width:auto}
+.sheet{background:#fff;color:#000;font:15px/1.35 Tinos,"Times New Roman",serif;padding:22px 26px;border:1px solid var(--line);margin:0 auto}
+.sheet input,.sheet textarea{font:inherit;color:#000;background:none;border:0;border-bottom:1px dotted #bbb;border-radius:0;padding:2px 3px;width:100%}
+.sheet textarea{resize:none;overflow:hidden;display:block}
+.sheet .v{font:inherit;color:#000;white-space:pre-wrap;min-height:1.3em}
+.top{text-align:right;font-weight:700;font-size:14px}
+.top input,.top .v{text-align:right;font-weight:700}
+.lh{text-align:center}
+.lh input,.lh .v{text-align:center;font-weight:700;font-size:15px}
+.lh .nm{font:800 38px/1.15 Bitter,Georgia,serif}
+.rule{border:0;border-top:1.5px solid #000;margin:6px 0 8px}
+.refrow{display:flex;justify-content:space-between;gap:12px;font-size:16px}
+.refrow label{display:flex;align-items:center;gap:4px}
+.refrow label:first-child input,.refrow label:first-child .v{width:210px;border-bottom:0}
+.refrow input[type=date],.refrow .v[data-t=date]{width:190px;border-bottom:1.5px dotted #000}
+.vrow{display:flex;justify-content:flex-end;font-size:14px;margin-top:2px}.vrow label{display:flex;gap:4px;align-items:center}.vrow input{width:170px}
+.to{margin-top:12px;font-size:16px}
+.cn,.ca{font-weight:700;text-transform:uppercase;font-size:16px}
+.opt{font-size:14px}
+.dt{text-align:center;font:700 19px Tinos,serif;text-decoration:underline;margin:14px 0 8px;text-transform:uppercase}
+.tw{overflow-x:auto}
+.bt{width:100%;min-width:640px;border-collapse:collapse;border:1px solid #000;font-size:14px}
+.bt th{border:1px solid #000;padding:4px;text-align:center;font-weight:700}
+.bt td{border-left:1px solid #000;border-right:1px solid #000;padding:3px 4px;vertical-align:top}
+.bt td.c{text-align:center}.bt td.n{text-align:right;white-space:nowrap}
+.bt tr.fill td{height:30px}
+.bt textarea,.bt td .v:not([data-t=number]){text-align:justify}
+.bt input[type=number],.bt td .v[data-t=number]{text-align:right}
+.qu{display:flex;gap:3px;justify-content:center}.qu input:first-child{width:50px;flex:none}.qu input:last-child{flex:1;min-width:0;text-align:left}
+.qu .v{width:auto}
+.x{background:none;border:0;color:#999;cursor:pointer;font-size:18px}
+.tt{width:46%;margin-left:auto;border-collapse:collapse;font-size:14px;font-weight:700}
+.tt td{border:1px solid #000;padding:3px 8px}.tt td:last-child{text-align:right;width:40%}
+.wd{border:1px solid #000;border-top:0;padding:3px 6px;font-weight:700;font-size:14px}
+@media(max-width:620px){main{padding:0 8px;margin:8px auto}.bar{position:static;padding:8px 10px;gap:6px}.bar h1{flex:1 1 100%;font-size:15px}.seg{flex:1 1 100%}.seg button{flex:1;padding:10px 4px}.bar>.btn{flex:1 1 22%;padding:10px 4px;font-size:13px}#pdf{order:1;flex:1 1 100%!important;font-size:15px!important}.tools .btn{flex:1 1 45%;min-height:42px}#scan{flex:1 1 100%}.opts{grid-template-columns:1fr 1fr}.sheet{padding:12px}.sheet input,.sheet textarea,.opts input,.opts select{font-size:16px}.lh input{font-size:13px}.top input{font-size:14px}.lh .nm{font-size:clamp(17px,5.4vw,24px)}.tt{width:100%}.refrow{flex-direction:column;gap:4px}.refrow input,.refrow label:first-child input{width:100%!important}.refrow label{flex:1}.row{flex-wrap:wrap}.tw{overflow:visible}.bt{min-width:0;border:0}.bt thead{display:none}.bt tbody,.bt td{display:block}.bt tr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px 8px;border:1px solid #000;margin-bottom:8px;padding:8px;position:relative}.bt td{border:0!important;padding:0!important}.bt td:nth-child(1),.bt td:nth-child(2){grid-column:1/4}.bt td:nth-child(1){font-weight:700;text-align:left}.bt td[data-l]::before{content:attr(data-l);display:block;font-size:11px;color:#666;font-weight:400}.bt td.noprint{position:absolute;top:2px;right:6px}.bt td.noprint .x{font-size:22px;padding:4px 8px}.bt tr.fill{display:none}.qu input:first-child{width:56px}}
+.sheet.est .lh input,.sheet.est .lh .v,.sheet.est .top input,.sheet.est .top .v,.sheet.est .dt,.sheet.est .bt th{color:#9f3626}
+.saved{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:14px}
+.saved h3{margin:0 0 8px;font:800 16px Bitter,Georgia,serif}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:7px 0}
+.row span{color:var(--mute);font-size:13px}
+@page{size:A4 portrait;margin:10mm}
+@media print{body{background:#fff}body::before,.bar,.tools,.opts,.saved,.noprint,#scanmsg{display:none!important}main{margin:0;max-width:none;padding:0}.sheet{border:0;padding:0}.sheet input,.sheet textarea{border:0!important}.refrow input[type=date]{border-bottom:1.5px dotted #000!important}.refrow input[type=date]::-webkit-calendar-picker-indicator{display:none}.tw{overflow:visible}.bt{min-width:0}.bt tr.fill td{height:300px}}
+#print{display:none!important}
+</style>
+</head>
+<body>
+<div class="bar">
+  <h1>Vasthu Kala · Billing</h1>
+  <div class="seg" id="type" role="group" aria-label="Document type">
+    <button data-t="Quotation" class="on">Quotation</button><button data-t="Estimate">Estimate</button><button data-t="Invoice">Bill / Invoice</button>
+  </div>
+  <button class="btn ghost" id="new">New</button>
+  <button class="btn ghost" id="save">Save</button>
+  <button class="btn ghost" id="print">Print</button>
+  <button class="btn ghost" id="prev">Preview</button>
+  <button class="btn" id="pdf">Download PDF</button>
+</div>
+<main>
+<div class="tools">
+  <button class="btn" id="scan">Scan handwritten bill (AI)</button>
+  <input type="file" id="scanfile" accept="image/*" hidden>
+  <button class="btn ghost" id="add">Add item</button>
+  <button class="btn ghost" id="sample">Load sample items</button>
+  <button class="btn ghost" id="theme">Light / dark</button>
+</div>
+<div id="scanmsg" role="status" style="margin:0 0 8px"></div>
+<div class="opts">
+  <label>Customer<select id="cpick"></select></label>
+  <label>Save current customer<button class="btn ghost" id="csave" type="button" style="width:100%">Save customer</button></label>
+  <label class="gstopt">GST (%)<input id="gst" type="number" min="0" step="any" value="18"></label>
+  <label class="gstopt">Tax display<select id="gtype"><option value="one">GST single line</option><option value="in">CGST + SGST (Kerala)</option><option value="out">IGST (other state)</option></select></label>
+  <label class="ck gstopt"><input id="incl" type="checkbox"> Rates include GST</label>
+  <label>Discount (₹)<input id="disc" type="number" min="0" step="any" value="0"></label>
+  <label>Transport / other (₹)<input id="trans" type="number" min="0" step="any" value="0"></label>
+  <label>Advance received (₹)<input id="adv" type="number" min="0" step="any" value="0"></label>
+</div>
+<div class="sheet" id="sheet">
+  <div class="top"><input id="sphone" value="Mob : 9656024010" aria-label="Mobile"><input id="sgst" value="GSTIN: 32CCQPV0983B1ZF" aria-label="GSTIN"></div>
+  <div class="lh">
+    <input class="nm" id="sname" value="Vasthu Kala Wood Industry" aria-label="Business name">
+    <input id="saddr" value="Alakode (P.O) Pin: 670571" aria-label="Address">
+    <input id="semail" value="Gmail : vasthukalawoodindustry@gmail.com" aria-label="Email">
+  </div>
+  <hr class="rule">
+  <div class="refrow"><label>Ref.<input id="num"></label><label>Date:<input id="date" type="date"></label></div>
+  
+  <div class="to">
+    <div>To</div>
+    <input class="cn" id="cname" placeholder="Customer name">
+    <textarea class="ca" id="caddr" rows="2" placeholder="Customer address"></textarea>
+    <input class="opt" id="cgst" data-pre="GSTIN: " placeholder="Customer GSTIN (optional)">
+    <input class="opt" id="cphone" data-pre="Ph: " placeholder="Customer phone (optional)">
+    <input class="opt" id="ref" data-pre="Project: " placeholder="Project / reference (optional)">
+  </div>
+  <div class="dt" id="title">Quotation</div>
+  <div class="tw"><table class="bt">
+    <thead><tr><th style="width:42px">Sl No.</th><th>Description of Goods</th><th style="width:105px">Qty</th><th style="width:80px">Rate</th><th style="width:110px">Amount</th><th class="noprint" style="width:28px;border:0"></th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <table class="tt"><tbody>
+    <tr id="rtv"><td id="ltv">Total Taxable Value</td><td id="tv">0.00</td></tr>
+    <tr id="rd"><td>Less: Discount</td><td id="vd"></td></tr>
+    <tr id="rg1"><td id="l1">GST@18%</td><td id="v1">0.00</td></tr>
+    <tr id="rg2"><td id="l2">SGST</td><td id="v2"></td></tr>
+    <tr id="rt"><td>Transport / other</td><td id="vt"></td></tr>
+    <tr><td>Total</td><td id="grand">0.00</td></tr>
+    <tr id="ra"><td>Advance received</td><td id="va"></td></tr>
+    <tr id="rb"><td>Balance due</td><td id="bal"></td></tr>
+  </tbody></table>
+  <div class="wd" id="words"></div>
+</div>
+<div class="tools" style="margin-top:10px"><button class="btn ghost" id="prev2">Preview</button><button class="btn" id="pdf2">Download PDF</button></div>
+<div class="saved"><h3>Saved documents</h3><div id="list"></div></div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const pre={Quotation:'QT',Estimate:'EST',Invoice:'INV'},ttl={Quotation:'Quotation',Estimate:'Estimate',Invoice:'Tax Invoice'};
+let type='Quotation',items=[],cur=null;
+const fmt=n=>(+n||0).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+function inr(n){const r=Math.floor(n+1e-9),p=Math.round((n-r)*100),a=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'],b=['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+const t=x=>x<20?a[x]:b[Math.floor(x/10)]+(x%10?' '+a[x%10]:''),h=x=>(x>99?a[Math.floor(x/100)]+' hundred'+(x%100?' ':''):'')+(x%100?t(x%100):'');
+let s='',m=r;[[1e7,'crore'],[1e5,'lakh'],[1e3,'thousand']].forEach(([v,w])=>{if(m>=v){s+=h(Math.floor(m/v))+' '+w+' ';m%=v}});s+=m?h(m):'';if(!r)s='Zero';
+return 'GRAND TOTAL IN WORDS: - INR '+s.trim()+' and '+(p?t(p):'Zero')+' Paise only.'}
+function nextNum(){const c=store.get('vk_count_'+type,0)+1;return pre[type]+'/'+new Date().getFullYear()+'/'+String(c).padStart(3,'0')}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
+function size(){document.querySelectorAll('.sheet textarea').forEach(t=>{t.style.height='auto';t.style.height=t.scrollHeight+'px'})}
+function render(){
+ $('rows').innerHTML=items.map((it,i)=>`<tr><td class="c">${i+1}.</td><td data-l="Description"><textarea rows="1" data-i="${i}" data-k="d">${esc(it.d)}</textarea></td><td data-l="Qty"><div class="qu"><input type="number" min="0" step="any" data-i="${i}" data-k="q" value="${it.q}"><input data-i="${i}" data-k="u" value="${esc(it.u)}" aria-label="Unit"></div></td><td data-l="Rate"><input id="r${i}" type="number" min="0" step="any" data-i="${i}" data-k="r" value="${it.r}"></td><td data-l="Amount"><input id="a${i}" type="number" min="0" step="any" data-i="${i}" data-k="a"></td><td class="noprint"><button class="x" data-del="${i}" aria-label="Remove item">×</button></td></tr>`).join('')+'<tr class="fill"><td></td><td></td><td></td><td></td><td></td><td class="noprint" style="border:0"></td></tr>';
+ calc();size()}
+function calc(){
+ const est=type==='Estimate',g=est?0:(+$('gst').value||0),d=+$('disc').value||0,tr=+$('trans').value||0,ad=+$('adv').value||0,inc=$('incl').checked,mode=$('gtype').value;let T=0;
+ items.forEach((it,i)=>{const gross=it.q*it.r;T+=inc?gross/(1+g/100):gross;
+  const e=$('a'+i);if(e&&document.activeElement!==e)e.value=gross?gross.toFixed(2):'';
+  });
+ const dd=inc?d/(1+g/100):d,base=Math.max(T-dd,0),gt=base*g/100,tot=base+gt+tr,sh=(id,on,v)=>{$(id).style.display=on?'':'none';if(on&&v!=null)$('v'+id.slice(1)).textContent=v};
+ $('tv').textContent=fmt(T);$('ltv').textContent=est?'Sub Total':'Total Taxable Value';$('rtv').style.display=est&&!(d>0||tr>0)?'none':'';$('rg1').style.display=est?'none':'';sh('rd',d>0);$('vd').textContent=fmt(dd);
+ $('l1').textContent=(mode==='in'?'CGST@'+g/2:mode==='out'?'IGST@'+g:'GST@'+g)+'%';$('v1').textContent=fmt(mode==='in'?gt/2:gt);
+ $('rg2').style.display=mode==='in'&&!est?'':'none';$('l2').textContent='SGST@'+g/2+'%';$('v2').textContent=fmt(gt/2);
+ $('rt').style.display=tr>0?'':'none';$('vt').textContent=fmt(tr);
+ $('grand').textContent=fmt(tot);$('ra').style.display=ad>0?'':'none';$('va').textContent=fmt(ad);$('rb').style.display=ad>0?'':'none';$('bal').textContent=fmt(tot-ad);
+ $('words').textContent=inr(tot)}
+function setType(t){type=t;document.querySelectorAll('#type button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
+ $('title').textContent=ttl[t];if(!cur)$('num').value=nextNum();if(!cur&&t==='Quotation')$('incl').checked=true;$('sheet').classList.toggle('est',t==='Estimate');document.querySelectorAll('.gstopt').forEach(e=>e.style.display=t==='Estimate'?'none':'');if($('rows').firstChild)calc()}
+function fresh(){cur=null;items=[{d:'',u:'nos',q:1,r:0}];['cname','caddr','cphone','cgst','ref'].forEach(i=>$(i).value='');pick(0);$('cpick').value='0';
+ $('disc').value=0;$('trans').value=0;$('adv').value=0;$('gst').value=18;$('incl').checked=false;$('gtype').value='one';
+ $('date').valueAsDate=new Date();setType(type);render()}
+const FK=['sname','saddr','sphone','sgst','semail','cname','caddr','cphone','cgst','ref','disc','gst','trans','adv','gtype'];
+function snap(){return{id:cur||Date.now(),type,inc:$('incl').checked,num:$('num').value,date:$('date').value,items,f:Object.fromEntries(FK.map(k=>[k,$(k).value]))}}
+function load(d){cur=d.id;type=d.type;items=d.items;Object.entries(d.f).forEach(([k,v])=>{const e=$(k);if(e)e.value=v});$('incl').checked=!!d.inc;$('cpick').value='';$('num').value=d.num;$('date').value=d.date;setType(d.type);render();scrollTo(0,0)}
+function list(){const all=store.get('vk_docs',[]);$('list').innerHTML=all.length?all.map(d=>`<div class="row"><div><b>${esc(d.num)}</b> <span>${esc(d.type)} · ${esc(d.f.cname||'No name')} · ${d.date}</span></div><div><button class="btn ghost" data-open="${d.id}">Open</button> <button class="btn ghost" data-rm="${d.id}">Delete</button></div></div>`).join(''):'<span style="color:var(--mute)">Nothing saved yet. Fill in a document and press Save.</span>'}
+$('type').onclick=e=>{const t=e.target.dataset.t;if(t)setType(t)};
+$('rows').addEventListener('input',e=>{const t=e.target,i=t.dataset.i;if(i==null)return;const k=t.dataset.k,it=items[i];
+ if(k==='a'){const v=+t.value||0;it.r=it.q?v/it.q:0;$('r'+i).value=it.r?+it.r.toFixed(4):''}
+ else it[k]=(k==='q'||k==='r')?(+t.value||0):t.value;calc()});
+$('rows').addEventListener('click',e=>{const i=e.target.dataset.del;if(i!=null){items.splice(i,1);if(!items.length)items.push({d:'',u:'nos',q:1,r:0});render()}});
+['gst','incl','gtype','disc','trans','adv'].forEach(i=>{$(i).oninput=calc;$(i).onchange=calc});
+$('add').onclick=()=>{items.push({d:'',u:'nos',q:1,r:0});render()};
+$('sample').onclick=()=>{items=[{d:'Hardwood bench 180×30×45 cm, plank leg',u:'nos',q:80,r:1900},{d:'Hardwood desk 180×42.5×75 cm',u:'nos',q:80,r:2500},{d:'Hardwood junior officer’s table 120×75×75 cm, one drawer and one cupboard',u:'nos',q:25,r:7500},{d:'Hardwood arm chair, plank seat',u:'nos',q:28,r:2100}];render()};
+$('new').onclick=fresh;
+$('print').onclick=()=>{const t=document.title;document.title=(($('num').value||'document')+' '+($('cname').value||'')).trim().replace(/[\/\\:*?"<>|]/g,'-');print();setTimeout(()=>document.title=t,500)};
+$('theme').onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).getPropertyValue('--bg').trim()==='#121212';r.dataset.theme=d?'light':'dark';store.set('vk_theme',r.dataset.theme)};
+$('save').onclick=()=>{const all=store.get('vk_docs',[]),d=snap(),i=all.findIndex(x=>x.id===d.id);
+ if(i>=0)all[i]=d;else{all.unshift(d);store.set('vk_count_'+type,store.get('vk_count_'+type,0)+1)}
+ cur=d.id;store.set('vk_docs',all);store.set('vk_seller3',Object.fromEntries(['sname','saddr','sphone','sgst','semail'].map(k=>[k,$(k).value])));list();$('save').textContent='Saved';setTimeout(()=>$('save').textContent='Save',1200)};
+$('list').onclick=e=>{const o=e.target.dataset.open,r=e.target.dataset.rm,all=store.get('vk_docs',[]);
+ if(o){const d=all.find(x=>String(x.id)===o);if(d)load(d)}
+ if(r&&confirm('Delete this saved document?')){store.set('vk_docs',all.filter(x=>String(x.id)!==r));list()}};
+document.addEventListener('input',e=>{if(e.target.tagName==='TEXTAREA'){e.target.style.height='auto';e.target.style.height=e.target.scrollHeight+'px'}});
+const th=store.get('vk_theme',null);if(th)document.documentElement.dataset.theme=th;
+const sl=store.get('vk_seller3',null);if(sl)Object.entries(sl).forEach(([k,v])=>$(k).value=v);
+const PDFCSS='html,body{margin:0;background:#fff;width:794px}body{padding:0!important}body::before{display:none}.sheet{width:794px;max-width:none;border:0;padding:34px 40px 0;margin:0}.tw{overflow:visible}.bt{min-width:0}';
+async function savePdf(name,blob){
+ const C=window.Capacitor;
+ if(C&&C.isNativePlatform&&C.isNativePlatform()){
+  const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result).split(',')[1]);r.onerror=()=>rej(new Error('Could not read the PDF'));r.readAsDataURL(blob)});
+  const w=await C.Plugins.Filesystem.writeFile({path:name,data:b64,directory:'CACHE'});
+  await C.Plugins.Share.share({title:name,url:w.uri,dialogTitle:'Save or share the PDF'});
+ }else{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000)}
+}
+async function makePdf(){
+ const btn=$('pdf');btn.disabled=true;btn.textContent='Preparing…';let fr;
+ try{
+  const src=$('sheet'),cl=src.cloneNode(true),a=[...src.querySelectorAll('input,textarea')],b=[...cl.querySelectorAll('input,textarea')];
+  b.forEach((el,i)=>{const o=a[i];let v=o.value;
+   if(o.classList.contains('opt')){if(!v){el.remove();return}v=(o.dataset.pre||'')+v}
+   if(o.type==='date'&&v){const p=v.split('-');v=p[2]+'/'+p[1]+'/'+p[0]}
+   if((o.dataset.k==='a'||o.dataset.k==='r')&&v)v=fmt(v);
+   const d=document.createElement('div');d.className=(o.className+' v').trim();d.dataset.t=o.type||o.tagName.toLowerCase();d.textContent=v;el.replaceWith(d)});
+  cl.querySelectorAll('.noprint').forEach(e=>e.remove());
+  const css=[...document.querySelectorAll('style')].map(s=>s.textContent).join('\n');
+  const html='<!DOCTYPE html><html data-theme="light"><head><meta charset="utf-8"><link href="lib/fonts.css" rel="stylesheet"><style>'+css+'</style><style>'+PDFCSS+'</style></head><body>'+cl.outerHTML+'</body></html>';
+  fr=document.createElement('iframe');fr.style.cssText='position:fixed;left:-9999px;top:0;width:794px;height:1200px;border:0';document.body.appendChild(fr);
+  await new Promise(r=>{fr.onload=r;fr.srcdoc=html});
+  const doc=fr.contentDocument;
+  await Promise.all(['800 38px Bitter','700 15px Tinos','400 15px Tinos'].map(f=>doc.fonts.load(f).catch(()=>0)));
+  await new Promise(r=>setTimeout(r,300));
+  const used=[...doc.querySelectorAll('#rows tr:not(.fill)')].reduce((s,r)=>s+r.offsetHeight,0),fl=doc.querySelector('#rows tr.fill td');if(fl)fl.style.height=Math.max(30,400-used)+'px';
+  const H=doc.body.scrollHeight;fr.style.height=H+'px';
+  const canvas=await html2canvas(doc.body,{scale:2,backgroundColor:'#fff',width:794,height:H,windowWidth:794,windowHeight:H});
+  const s=canvas.width/794,PH=Math.floor(794*297/210),cands=[...doc.querySelectorAll('#rows tr,.tt,.wd,.refrow,.to,.dt,.rule')].map(e=>Math.round(e.getBoundingClientRect().bottom)).sort((x,y)=>x-y);
+  const br=[0];let st=0;while(H-st>PH){let en=st+PH;const ok=cands.filter(c=>c>st+PH*0.5&&c<=en);if(ok.length)en=ok[ok.length-1];br.push(en);st=en}br.push(H);
+  const pdf=new window.jspdf.jsPDF({unit:'mm',format:'a4',orientation:'portrait'});
+  for(let p=0;p<br.length-1;p++){const y0=br[p],h=br[p+1]-y0,c=document.createElement('canvas');c.width=canvas.width;c.height=Math.round(h*s);const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(canvas,0,Math.round(y0*s),canvas.width,c.height,0,0,c.width,c.height);if(p)pdf.addPage();pdf.addImage(c.toDataURL('image/jpeg',.95),'JPEG',0,0,210,h/794*210)}
+  const name=(($('num').value||'document')+' '+($('cname').value||'')).trim().replace(/[\/\\:*?"<>|]/g,'-');
+  await savePdf(name+'.pdf',pdf.output('blob'));
+ }catch(e){if(!e||!/cancel/i.test(String(e.message||e)))alert('Could not create the PDF: '+((e&&e.message)||e))}
+ finally{if(fr)fr.remove();btn.disabled=false;btn.textContent='Download PDF'}
+}
+$('pdf').onclick=makePdf;
+function buildHtml(){
+ const src=$('sheet'),cl=src.cloneNode(true),a=[...src.querySelectorAll('input,textarea')],b=[...cl.querySelectorAll('input,textarea')];
+ b.forEach((el,i)=>{const o=a[i];let v=o.value;
+  if(o.classList.contains('opt')){if(!v){el.remove();return}v=(o.dataset.pre||'')+v}
+  if(o.type==='date'&&v){const p=v.split('-');v=p[2]+'/'+p[1]+'/'+p[0]}
+  if((o.dataset.k==='a'||o.dataset.k==='r')&&v)v=fmt(v);
+  const d=document.createElement('div');d.className=(o.className+' v').trim();d.dataset.t=o.type||o.tagName.toLowerCase();d.textContent=v;el.replaceWith(d)});
+ cl.querySelectorAll('.noprint').forEach(e=>e.remove());
+ const css=[...document.querySelectorAll('style')].map(s=>s.textContent).join('\n');
+ return '<!DOCTYPE html><html data-theme="light"><head><meta charset="utf-8"><link href="lib/fonts.css" rel="stylesheet"><style>'+css+'</style><style>'+PDFCSS+'</style></head><body>'+cl.outerHTML+'</body></html>'}
+async function preview(){
+ const btns=[$('prev'),$('prev2')];btns.forEach(b=>b.disabled=true);
+ const old=$('pvov');if(old)old.remove();
+ try{
+  const html=buildHtml(),ov=document.createElement('div');ov.id='pvov';ov.style.cssText='position:fixed;inset:0;z-index:50;background:#2b2b2b;overflow:auto;padding-top:env(safe-area-inset-top,0px)';
+  ov.innerHTML='<div style="position:sticky;top:0;z-index:2;background:#000;display:flex;gap:8px;padding:8px 10px;align-items:center"><b style="color:#fff;margin-right:auto;font:600 15px system-ui">Preview</b><button class="btn ghost" id="pvclose" style="color:#fff">Close</button><button class="btn" id="pvpdf">Download PDF</button></div><div id="pvbox" style="margin:10px auto;background:#fff;overflow:hidden"></div>';
+  document.body.appendChild(ov);
+  $('pvclose').onclick=()=>ov.remove();$('pvpdf').onclick=()=>{ov.remove();makePdf()};
+  const box=$('pvbox'),fr=document.createElement('iframe');fr.style.cssText='width:794px;border:0;transform-origin:0 0;display:block';box.appendChild(fr);
+  await new Promise(r=>{fr.onload=r;fr.srcdoc=html});
+  const doc=fr.contentDocument;
+  await Promise.all(['800 38px Bitter','700 15px Tinos','400 15px Tinos'].map(f=>doc.fonts.load(f).catch(()=>0)));
+  await new Promise(r=>setTimeout(r,250));
+  const used=[...doc.querySelectorAll('#rows tr:not(.fill)')].reduce((s,r)=>s+r.offsetHeight,0),fl=doc.querySelector('#rows tr.fill td');if(fl)fl.style.height=Math.max(30,400-used)+'px';
+  const H=doc.body.scrollHeight,k=Math.min(1,(innerWidth-20)/794);
+  fr.style.height=H+'px';fr.style.transform='scale('+k+')';box.style.width=(794*k)+'px';box.style.height=(H*k)+'px';
+ }catch(e){alert('Could not open the preview: '+((e&&e.message)||e))}
+ finally{btns.forEach(b=>b.disabled=false)}
+}
+$('prev').onclick=preview;$('prev2').onclick=preview;$('pdf2').onclick=makePdf;
+let smp=null;
+if(window.claude){claude.use('sample').then(s=>{smp=s;if(!s)$('scan').style.display='none'}).catch(()=>{$('scan').style.display='none'})}else $('scan').style.display='none';
+function shrink(file,max=1800){return new Promise((res,rej)=>{const fr=new FileReader();fr.onerror=()=>rej(new Error('Could not read the image'));fr.onload=()=>{const img=new Image();img.onerror=()=>rej(new Error('Could not open the image'));img.onload=()=>{const k=Math.min(1,max/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext('2d').drawImage(img,0,0,c.width,c.height);c.toBlob(b=>b?res(b):rej(new Error('Could not prepare the image')),'image/jpeg',.88)};img.src=fr.result};fr.readAsDataURL(file)})}
+const SCANPROMPT='The attached image is a photo of a handwritten rough bill or quotation from a wood furniture workshop in Kerala, India. Read it carefully and return ONLY JSON in this shape: {"customer": string or null, "items": [{"description": string, "unit": string, "qty": number, "rate": number, "amount": number}], "written_total": number or null}. Rules: one item per work or line; keep sizes such as 180x30x45 in the description; expand HW to Hardwood, AW to Anjili wood and TW to Teak wood; the unit defaults to nos; a line like "80 nos x 1900 = 152000" means qty 80, rate 1900, amount 152000; ignore running sums and put the grand total only in written_total; if only qty and amount are given, still return both and leave rate 0; if a number is unreadable use 0; never invent items.';
+$('scan').onclick=()=>$('scanfile').click();
+$('scanfile').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f||!smp)return;
+ const m=$('scanmsg'),b=$('scan');m.textContent='Reading the handwriting…';b.disabled=true;
+ try{
+  const blob=await shrink(f);
+  const data=await smp.json(SCANPROMPT,{images:blob,cache:false,modelTier:'default'});
+  const list=(data&&data.items)||[];if(!list.length)throw new Error('No items found in the image');
+  type='Estimate';fresh();
+  items=list.map(i=>{let q=+i.qty||0,r=+i.rate||0;const a=+i.amount||0;if(!r&&q&&a)r=a/q;if(!q&&r&&a)q=a/r;return{d:String(i.description||''),u:String(i.unit||'nos'),q:q||1,r:r||0}});
+  if(data.customer){$('cname').value=data.customer;$('caddr').value='';$('cpick').value=''}
+  render();
+  const sum=items.reduce((s,i)=>s+i.q*i.r,0);let msg='Filled '+items.length+' items as an estimate. Check every line against the paper, because handwriting can be misread.';
+  if(data.written_total&&Math.abs(data.written_total-sum)>1)msg+=' The total written on the note ('+fmt(data.written_total)+') differs from the items total ('+fmt(sum)+').';
+  m.textContent=msg;
+ }catch(err){m.textContent=err&&err.code==='not_granted'?'Permission to use AI was not given.':'Could not read the bill: '+((err&&err.message)||err)}
+ finally{b.disabled=false}
+};
+const DEFC=[{n:'KERALA ARTISANTS DEVELOPMENT CORPATION LTD',a:'DISTRICT DEVELOPMENT OFFICE\nIRNAV, KANNUR'}];
+function custs(){return [...DEFC,...store.get('vk_cust',[])]}
+function fillPick(){$('cpick').innerHTML='<option value="">— Blank —</option>'+custs().map((x,i)=>'<option value="'+i+'">'+esc(x.n)+'</option>').join('')}
+function pick(i){const x=custs()[i];$('cname').value=x?x.n:'';$('caddr').value=x?x.a:'';$('cgst').value=(x&&x.g)||'';$('cphone').value=(x&&x.p)||'';size()}
+$('cpick').onchange=()=>pick($('cpick').value);
+$('csave').onclick=()=>{const n=$('cname').value.trim();if(!n)return;const l=store.get('vk_cust',[]),o={n,a:$('caddr').value,g:$('cgst').value,p:$('cphone').value},j=l.findIndex(x=>x.n===n);if(j>=0)l[j]=o;else l.push(o);store.set('vk_cust',l);fillPick();$('cpick').value=String(DEFC.length+(j>=0?j:l.length-1));$('csave').textContent='Saved';setTimeout(()=>$('csave').textContent='Save customer',1200)};
+fillPick();
+fresh();list();
+</script>
+</body>
+</html>
