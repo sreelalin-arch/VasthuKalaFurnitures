@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vasthu Kala Wood Industry – Bills & Quotations</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&family=Tinos:wght@400;700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+:root{--bg:#e4e4e4;--bar:#1c1c1c;--bar-t:#f2f2f2;--card:#fff;--ink:#111;--mute:#666;--line:#d0d0d0;--accent:#111;--accent-t:#fff;--field:#fafafa;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121212;--bar:#000;--card:#1e1e1e;--ink:#eee;--mute:#999;--line:#333;--accent:#f2f2f2;--accent-t:#111;--field:#262626}}
+:root[data-theme="dark"]{--bg:#121212;--bar:#000;--card:#1e1e1e;--ink:#eee;--mute:#999;--line:#333;--accent:#f2f2f2;--accent-t:#111;--field:#262626}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Public Sans",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bar);z-index:10}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bar);color:var(--bar-t);display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 14px}
+.bar h1{font:800 17px Bitter,Georgia,serif;margin:0 auto 0 0}
+.seg{display:flex;border:1px solid #666;border-radius:6px;overflow:hidden}
+.seg button{background:none;border:0;color:var(--bar-t);padding:7px 12px;font:inherit;cursor:pointer}
+.seg button.on{background:#f2f2f2;color:#111;font-weight:600}
+.btn{background:#f2f2f2;color:#111;border:0;border-radius:6px;padding:8px 13px;font:600 14px "Public Sans",system-ui,sans-serif;cursor:pointer}
+.btn.ghost{background:none;color:inherit;border:1px solid currentColor}
+main .btn{background:var(--accent);color:var(--accent-t)}main .btn.ghost{background:none;color:var(--ink)}
+.btn:disabled{opacity:.5}
+.btn:focus-visible,.seg button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #2d6cdf;outline-offset:1px}
+main{max-width:920px;margin:14px auto;padding:0 10px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.opts{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:10px 14px;margin-bottom:10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.opts label{font-size:12px;color:var(--mute);display:block}
+.opts input,.opts select{width:100%;background:var(--field);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:6px 8px;font:inherit}
+.opts .ck{display:flex;align-items:center;gap:8px;padding-top:18px;color:var(--ink);font-size:14px}.opts .ck input{width:auto}
+.sheet{background:#fff;color:#000;font:15px/1.35 Tinos,"Times New Roman",serif;padding:22px 26px;border:1px solid var(--line);margin:0 auto}
+.sheet input,.sheet textarea{font:inherit;color:#000;background:none;border:0;border-bottom:1px dotted #bbb;border-radius:0;padding:2px 3px;width:100%}
+.sheet textarea{resize:none;overflow:hidden;display:block}
+.sheet .v{font:inherit;color:#000;white-space:pre-wrap;min-height:1.3em}
+.top{text-align:right;font-weight:700;font-size:14px}
+.top input,.top .v{text-align:right;font-weight:700}
+.lh{text-align:center}
+.lh input,.lh .v{text-align:center;font-weight:700;font-size:15px}
+.lh .nm{font:800 38px/1.15 Bitter,Georgia,serif}
+.rule{border:0;border-top:1.5px solid #000;margin:6px 0 8px}
+.refrow{display:flex;justify-content:space-between;gap:12px;font-size:16px}
+.refrow label{display:flex;align-items:center;gap:4px}
+.refrow label:first-child input,.refrow label:first-child .v{width:210px;border-bottom:0}
+.refrow input[type=date],.refrow .v[data-t=date]{width:190px;border-bottom:1.5px dotted #000}
+.vrow{display:flex;justify-content:flex-end;font-size:14px;margin-top:2px}.vrow label{display:flex;gap:4px;align-items:center}.vrow input{width:170px}
+.to{margin-top:12px;font-size:16px}
+.cn,.ca{font-weight:700;text-transform:uppercase;font-size:16px}
+.opt{font-size:14px}
+.dt{text-align:center;font:700 19px Tinos,serif;text-decoration:underline;margin:14px 0 8px;text-transform:uppercase}
+.tw{overflow-x:auto}
+.bt{width:100%;min-width:640px;border-collapse:collapse;border:1px solid #000;font-size:14px}
+.bt th{border:1px solid #000;padding:4px;text-align:center;font-weight:700}
+.bt td{border-left:1px solid #000;border-right:1px solid #000;padding:3px 4px;vertical-align:top}
+.bt td.c{text-align:center}.bt td.n{text-align:right;white-space:nowrap}
+.bt tr.fill td{height:30px}
+.bt textarea,.bt td .v:not([data-t=number]){text-align:justify}
+.bt input[type=number],.bt td .v[data-t=number]{text-align:right}
+.qu{display:flex;gap:3px;justify-content:center}.qu input:first-child{width:50px;flex:none}.qu input:last-child{flex:1;min-width:0;text-align:left}
+.qu .v{width:auto}
+.x{background:none;border:0;color:#999;cursor:pointer;font-size:18px}
+.tt{width:46%;margin-left:auto;border-collapse:collapse;font-size:14px;font-weight:700}
+.tt td{border:1px solid #000;padding:3px 8px}.tt td:last-child{text-align:right;width:40%}
+.wd{border:1px solid #000;border-top:0;padding:3px 6px;font-weight:700;font-size:14px}
+@media(max-width:620px){main{padding:0 8px;margin:8px auto}.bar{position:static;padding:8px 10px;gap:6px}.bar h1{flex:1 1 100%;font-size:15px}.seg{flex:1 1 100%}.seg button{flex:1;padding:10px 4px}.bar>.btn{flex:1 1 22%;padding:10px 4px;font-size:13px}#pdf{order:1;flex:1 1 100%!important;font-size:15px!important}.tools .btn{flex:1 1 45%;min-height:42px}#scan{flex:1 1 100%}.opts{grid-template-columns:1fr 1fr}.sheet{padding:12px}.sheet input,.sheet textarea,.opts input,.opts select{font-size:16px}.lh input{font-size:13px}.top input{font-size:14px}.lh .nm{font-size:clamp(17px,5.4vw,24px)}.tt{width:100%}.refrow{flex-direction:column;gap:4px}.refrow input,.refrow label:first-child input{width:100%!important}.refrow label{flex:1}.row{flex-wrap:wrap}.tw{overflow:visible}.bt{min-width:0;border:0}.bt thead{display:none}.bt tbody,.bt td{display:block}.bt tr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px 8px;border:1px solid #000;margin-bottom:8px;padding:8px;position:relative}.bt td{border:0!important;padding:0!important}.bt td:nth-child(1),.bt td:nth-child(2){grid-column:1/4}.bt td:nth-child(1){font-weight:700;text-align:left}.bt td[data-l]::before{content:attr(data-l);display:block;font-size:11px;color:#666;font-weight:400}.bt td.noprint{position:absolute;top:2px;right:6px}.bt td.noprint .x{font-size:22px;padding:4px 8px}.bt tr.fill{display:none}.qu input:first-child{width:56px}}
+.sheet.est .lh input,.sheet.est .lh .v,.sheet.est .top input,.sheet.est .top .v,.sheet.est .dt,.sheet.est .bt th{color:#9f3626}
+.saved{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:14px}
+.saved h3{margin:0 0 8px;font:800 16px Bitter,Georgia,serif}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:7px 0}
+.row span{color:var(--mute);font-size:13px}
+@page{size:A4 portrait;margin:10mm}
+@media print{body{background:#fff}body::before,.bar,.tools,.opts,.saved,.noprint,#scanmsg{display:none!important}main{margin:0;max-width:none;padding:0}.sheet{border:0;padding:0}.sheet input,.sheet textarea{border:0!important}.refrow input[type=date]{border-bottom:1.5px dotted #000!important}.refrow input[type=date]::-webkit-calendar-picker-indicator{display:none}.tw{overflow:visible}.bt{min-width:0}.bt tr.fill td{height:300px}}
+body.home .bar,body.home main{display:none}
+body:not(.home) #home{display:none}
+#home{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px;background:linear-gradient(#1c1c1c,#000);color:#f2f2f2}
+.hbox{width:100%;max-width:520px;text-align:center}
+.hlogo{width:64px;height:64px;border-radius:50%;background:#f2f2f2;color:#111;display:inline-flex;align-items:center;justify-content:center;font:800 24px Bitter,Georgia,serif}
+.hbox h1{font:800 clamp(24px,7vw,34px)/1.15 Bitter,Georgia,serif;margin:12px 0 4px}
+.hbox p{color:#aaa;margin:0 0 22px;font-size:14px}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hgrid button{background:#f2f2f2;color:#111;border:0;border-radius:10px;padding:18px 10px;font:700 18px Bitter,Georgia,serif;cursor:pointer}
+.hgrid button small{display:block;font:400 12px "Public Sans",sans-serif;color:#555;margin-top:4px}
+.hgrid .wide{grid-column:1/3;background:#2b2b2b;color:#f2f2f2}.hgrid .wide small{color:#aaa}
+.hbox h3{text-align:left;font-size:14px;color:#aaa;margin:22px 0 6px}
+.hrow{display:flex;justify-content:space-between;gap:8px;align-items:center;text-align:left;font-size:14px;border-top:1px solid #333;padding:8px 0}
+.hrow button{background:#333;color:#fff;border:0;border-radius:6px;padding:6px 12px;cursor:pointer}
+#rtov{position:fixed;inset:0;z-index:60;background:var(--bg);color:var(--ink);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+#rtov[hidden]{display:none}
+.rtbar{background:var(--bar);color:var(--bar-t);display:flex;gap:8px;align-items:center;padding:10px 12px}
+.rtbar b{margin-right:auto;font:800 16px Bitter,Georgia,serif}
+.rtbody{padding:10px 12px;overflow:auto;flex:1}
+.rtbody input,.rtbody select{width:100%;background:var(--field);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:10px;font:inherit;font-size:16px;margin-bottom:6px}
+.rtn{font-size:12px;color:var(--mute);margin:4px 0}
+.ri{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 10px;margin:6px 0;display:flex;gap:10px;align-items:center}
+.ri>div:first-child{flex:1;min-width:0}.ri b{font-size:14px;font-weight:600}.ri span{display:block;font-size:12px;color:var(--mute)}
+.ri .pr{font:800 16px Bitter,Georgia,serif;white-space:nowrap}
+#sug{position:fixed;z-index:40;background:#fff;color:#000;border:1px solid #999;border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.3);max-height:260px;overflow:auto;font:14px "Public Sans",sans-serif}
+#sug[hidden]{display:none}
+#sug div[data-j]{padding:7px 9px;border-top:1px solid #eee;cursor:pointer}#sug span{display:block;color:#666;font-size:12px}
+.ofl{background:none;border:0;color:#2d6cdf;font-size:12px;cursor:pointer;padding:2px 0;text-align:left;display:block}
+@media(max-width:620px){#homebtn{flex:0 0 auto!important}.bar h1{flex:1 1 0!important;min-width:0}}
+@media print{#home,#rtov,#sug{display:none!important}}
+
+/* light teakwood theme */
+:root:root:not([data-theme="dark"]){--bg:#e7d4b4;--bar:#e7d4b4;--barbg:rgba(231,212,180,.92);--bar-t:#3e2b1a;--card:#f3e6cf;--ink:#3e2b1a;--mute:#86694a;--line:#d6bd93;--accent:#a8682d;--accent-t:#fff8ec;--field:#efdfc4;--hi:#fff7e6;--sh:#c3a475;--g1:#d89d5f;--g2:#a8682d}
+:root:root[data-theme="dark"]{--bg:#2a1d12;--bar:#2a1d12;--barbg:rgba(42,29,18,.92);--bar-t:#f1e1c8;--card:#38281a;--ink:#f1e1c8;--mute:#b79c7a;--line:#4b3725;--accent:#d89d5f;--accent-t:#2a1d12;--field:#32231a;--hi:#47331f;--sh:#1b1209;--g1:#d89d5f;--g2:#a8682d}
+body{background:linear-gradient(165deg,var(--hi),var(--bg) 45%,var(--line)) fixed;color:var(--ink)}
+body::before{background:var(--bg)}
+.bar{background:var(--barbg);color:var(--ink);backdrop-filter:blur(10px);box-shadow:0 6px 18px -8px var(--sh)}
+.btn,main .btn{background:linear-gradient(145deg,var(--g1),var(--g2));color:#fff8ec;border-radius:14px;box-shadow:4px 4px 10px var(--sh),-3px -3px 8px var(--hi)}
+.btn.ghost,main .btn.ghost{background:var(--card);color:var(--ink);border:0}
+.btn:active{filter:brightness(.95)}
+.seg{border:0;border-radius:14px;background:var(--field);box-shadow:inset 3px 3px 7px var(--sh),inset -3px -3px 7px var(--hi);padding:3px;gap:2px}
+.seg button{color:var(--ink);border-radius:11px}.seg button.on{background:linear-gradient(145deg,var(--g1),var(--g2));color:#fff8ec;box-shadow:2px 2px 6px var(--sh)}
+.opts,.saved,.ri{background:var(--card);border:0;border-radius:18px;box-shadow:6px 6px 14px var(--sh),-5px -5px 12px var(--hi)}
+.opts input,.opts select,.rtbody input,.rtbody select{background:var(--field);color:var(--ink);border:0;border-radius:12px;box-shadow:inset 3px 3px 7px var(--sh),inset -3px -3px 7px var(--hi)}
+.sheet{border:0;border-radius:14px;box-shadow:0 14px 34px -10px rgba(90,58,26,.45)}
+.row{border-color:var(--line)}
+#rtov{background:var(--bg)}.rtbar{background:var(--barbg);color:var(--ink);box-shadow:0 6px 18px -8px var(--sh)}
+.ri .pr{color:var(--accent)}
+.gsq{width:44px;height:44px;flex:none;border:0;border-radius:14px;background:linear-gradient(145deg,var(--g1),var(--g2));color:#fff8ec;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:4px 4px 10px var(--sh),-3px -3px 8px var(--hi)}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#home{background:transparent;color:var(--ink);display:block;padding:calc(env(safe-area-inset-top,0px) + 16px) 16px 110px;min-height:100vh}
+.hwrap{max-width:560px;margin:0 auto}
+.htop{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.htop small{color:var(--mute);font-size:13px}
+.htop h1{font:800 clamp(22px,6.4vw,30px)/1.15 Bitter,Georgia,serif;margin:2px 0 0;text-align:left;color:var(--ink)}
+.hhero{position:relative;overflow:hidden;border-radius:22px;padding:22px 20px;background:linear-gradient(135deg,#e3b47a,#b3763a 60%,#8f5a2a);color:#fff8ec;box-shadow:8px 10px 22px -6px var(--sh),-4px -4px 12px var(--hi);display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.hhero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,.07) 0 2px,transparent 2px 14px);pointer-events:none}
+.hhero small{display:block;opacity:.85;font-size:12px}.hhero b{display:block;font:800 28px/1.1 Bitter,Georgia,serif;margin:4px 0}.hhero span{font-size:13px;opacity:.9}
+.hhero .gbtn{position:relative;z-index:1;flex:none;background:#fff8ec;color:#7a4a1f;border:0;border-radius:14px;padding:10px 14px;font:700 14px "Public Sans",sans-serif;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.2)}
+.hsec{font-weight:700;margin:22px 0 10px;text-align:left}
+.hcards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.hcards button{background:var(--card);color:var(--ink);border:0;border-radius:20px;padding:16px 8px 14px;cursor:pointer;box-shadow:6px 6px 14px var(--sh),-5px -5px 12px var(--hi);display:flex;flex-direction:column;align-items:center;gap:8px;font:700 15px Bitter,Georgia,serif}
+.hcards .ic{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,var(--g1),var(--g2));color:#fff8ec;display:flex;align-items:center;justify-content:center}
+.hcards small{font:400 11px "Public Sans",sans-serif;color:var(--mute)}
+#hres{width:100%;margin-top:14px;border:0;border-radius:16px;padding:12px;background:var(--card);color:var(--ink);box-shadow:5px 5px 12px var(--sh),-4px -4px 10px var(--hi);font:600 14px "Public Sans",sans-serif;cursor:pointer}
+#home .hrow{background:var(--card);border:0;border-radius:16px;padding:10px 12px;margin-bottom:8px;box-shadow:5px 5px 12px var(--sh),-4px -4px 10px var(--hi);color:var(--ink)}
+#home .hrow button{background:linear-gradient(145deg,var(--g1),var(--g2));color:#fff8ec;border-radius:10px}
+.nav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:min(92vw,420px);z-index:30;display:flex;justify-content:space-around;align-items:center;padding:10px;border-radius:24px;background:linear-gradient(180deg,#c98f55,#a8682d);box-shadow:0 12px 28px -8px rgba(80,48,20,.55)}
+.nav button{width:46px;height:46px;border:0;border-radius:14px;background:transparent;color:#fbe9cf;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.nav button.on{background:#fff4de;color:#8a5526;box-shadow:0 4px 10px rgba(0,0,0,.25);transform:translateY(-6px)}
+.sind{font-size:12px;padding:6px 12px;border-radius:12px;background:var(--card);color:var(--mute);align-self:center}.sind.bad{color:#b3261e;font-weight:700}
+.bd{font-style:normal;font-size:11px;padding:1px 8px;border-radius:8px;background:#f0c987;color:#5a3a14;margin-left:4px}.bd.ok{background:#cfe3c0;color:#2f5a1c}
+#docov{position:fixed;inset:0;z-index:60;background:var(--bg);color:var(--ink);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+#docov[hidden]{display:none}
+.dfil{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dbk{display:flex;gap:8px;margin:4px 0}.dbk .btn{flex:1}
+.di{flex-wrap:wrap}.di>div:first-child{flex:1 1 100%}.da{display:flex;gap:6px;width:100%}.da .btn{flex:1;padding:8px 4px;font-size:13px}
+.lnk{background:none;border:0;color:var(--accent);font:600 13px "Public Sans",sans-serif;cursor:pointer;float:right;padding:0}
+#hdraft{width:100%;margin-top:14px;border:0;border-radius:16px;padding:14px;background:linear-gradient(145deg,var(--g1),var(--g2));color:#fff8ec;font:700 16px Bitter,Georgia,serif;cursor:pointer;box-shadow:5px 5px 12px var(--sh),-4px -4px 10px var(--hi)}
+#hdraft small{display:block;font:400 12px "Public Sans",sans-serif;opacity:.9;margin-top:2px}
+#hdraft[hidden]{display:none}
+@media print{#docov,.sind{display:none!important}}
+</style>
+</head>
+<body class="home">
+<div id="home"><div class="hwrap">
+<div class="htop"><div><small>Welcome</small><h1>Vasthu Kala Furniture Industry</h1></div><button class="gsq" data-rates aria-label="Search official rates"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button></div>
+<div class="hhero"><div><small>Official price list</small><b>KADCO rates</b><span>514 items · tap to add to a bill</span></div><button class="gbtn" id="hrates" data-rates>Search rates</button></div>
+<div class="hsec">Create new</div>
+<div class="hcards"><button data-go="Quotation"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13h5M10 17h5"/></svg></span>Quotation<small>GST included</small></button><button data-go="Estimate"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span>Estimate<small>No GST</small></button><button data-go="Invoice"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></span>Bill<small>Tax invoice</small></button></div>
+<button id="hdraft" hidden></button>
+<button id="hres" hidden>Resume current document</button>
+<div class="hsec">Recent documents <button class="lnk" id="hall">View all &amp; backup</button></div><div id="hlist"></div></div>
+<nav class="nav"><button class="on" data-nav="home" aria-label="Home"><svg class="i" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg></button><button data-rates aria-label="Official rates"><svg class="i" viewBox="0 0 24 24"><path d="M3 12V4h8l9 9-8 8z"/><circle cx="7.5" cy="8.5" r="1"/></svg></button><button data-go="Quotation" aria-label="New quotation"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><button data-nav="recent" aria-label="Recent documents"><svg class="i" viewBox="0 0 24 24"><path d="M5 6h14M5 12h14M5 18h9"/></svg></button></nav></div>
+<div class="bar">
+  <button class="gsq" id="homebtn" aria-label="Home"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <h1>Vasthu Kala · Billing</h1>
+  <div class="seg" id="type" role="group" aria-label="Document type">
+    <button data-t="Quotation" class="on">Quotation</button><button data-t="Estimate">Estimate</button><button data-t="Invoice">Bill</button>
+  </div>
+  <button class="btn ghost" id="new">New</button>
+  <button class="btn ghost" id="save">Save</button>
+  <button class="btn ghost" id="print">Print</button>
+  <button class="btn ghost" id="prev">Preview</button>
+  <button class="btn" id="pdf">Download PDF</button>
+</div>
+<main>
+<div class="tools">
+  <button class="btn" id="orates">Official rates</button>
+  <button class="btn" id="scan">Scan handwritten bill (AI)</button>
+  <input type="file" id="scanfile" accept="image/*" hidden>
+  <button class="btn ghost" id="add">Add item</button>
+  <span id="saveind" class="sind noprint"></span>
+  <button class="btn ghost" id="theme">Light / dark</button>
+</div>
+<div id="scanmsg" role="status" style="margin:0 0 8px"></div>
+<div class="opts">
+  <label>Customer<select id="cpick"></select></label>
+  <label>Save current customer<button class="btn ghost" id="csave" type="button" style="width:100%">Save customer</button></label>
+  <label class="gstopt">GST (%)<input id="gst" type="number" min="0" step="any" value="18"></label>
+  <label class="gstopt">Tax display<select id="gtype"><option value="one">GST single line</option><option value="in">CGST + SGST (Kerala)</option><option value="out">IGST (other state)</option></select></label>
+  <label class="ck gstopt"><input id="incl" type="checkbox"> Rates include GST</label>
+  <label>Discount (₹)<input id="disc" type="number" min="0" step="any" value="0"></label>
+  <label>Transport / other (₹)<input id="trans" type="number" min="0" step="any" value="0"></label>
+  <label>Advance received (₹)<input id="adv" type="number" min="0" step="any" value="0"></label>
+</div>
+<div class="sheet" id="sheet">
+  <div class="top"><input id="sphone" value="Mob : 9656024010" aria-label="Mobile"><input id="sgst" value="GSTIN: 32CCQPV0983B1ZF" aria-label="GSTIN"></div>
+  <div class="lh">
+    <input class="nm" id="sname" value="Vasthu Kala Wood Industry" aria-label="Business name">
+    <input id="saddr" value="Alakode (P.O) Pin: 670571" aria-label="Address">
+    <input id="semail" value="Gmail : vasthukalawoodindustry@gmail.com" aria-label="Email">
+  </div>
+  <hr class="rule">
+  <div class="refrow"><label>Ref.<input id="num"></label><label>Date:<input id="date" type="date"></label></div>
+  
+  <div class="to">
+    <div>To</div>
+    <input class="cn" id="cname" placeholder="Customer name">
+    <textarea class="ca" id="caddr" rows="2" placeholder="Customer address"></textarea>
+    <input class="opt" id="cgst" data-pre="GSTIN: " placeholder="Customer GSTIN (optional)">
+    <input class="opt" id="cphone" data-pre="Ph: " placeholder="Customer phone (optional)">
+    <input class="opt" id="ref" data-pre="Project: " placeholder="Project / reference (optional)">
+  </div>
+  <div class="dt" id="title">Quotation</div>
+  <div class="tw"><table class="bt">
+    <thead><tr><th style="width:42px">Sl No.</th><th>Description of Goods</th><th style="width:105px">Qty</th><th style="width:80px">Rate</th><th style="width:110px">Amount</th><th class="noprint" style="width:28px;border:0"></th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <table class="tt"><tbody>
+    <tr id="rtv"><td id="ltv">Total Taxable Value</td><td id="tv">0.00</td></tr>
+    <tr id="rd"><td>Less: Discount</td><td id="vd"></td></tr>
+    <tr id="rg1"><td id="l1">GST@18%</td><td id="v1">0.00</td></tr>
+    <tr id="rg2"><td id="l2">SGST</td><td id="v2"></td></tr>
+    <tr id="rt"><td>Transport / other</td><td id="vt"></td></tr>
+    <tr><td>Total</td><td id="grand">0.00</td></tr>
+    <tr id="ra"><td>Advance received</td><td id="va"></td></tr>
+    <tr id="rb"><td>Balance due</td><td id="bal"></td></tr>
+  </tbody></table>
+  <div class="wd" id="words"></div>
+</div>
+</main>
+<div id="rtov" hidden><div class="rtbar"><b>Official rates</b><button class="btn" id="rdone">Close</button></div><div class="rtbody"><input id="rq" type="search" placeholder="Search work, e.g. desk 180 hardwood" autocomplete="off"><select id="rg"></select><div class="rtn" id="rnote"></div><div id="rl"></div></div></div>
+<div id="sug" hidden></div>
+<div id="docov" hidden><div class="rtbar"><b>Documents</b><button class="btn" id="ddone">Close</button></div><div class="rtbody">
+<input id="dq" type="search" placeholder="Search customer, number or reference" autocomplete="off">
+<div class="dfil"><select id="dt" aria-label="Type"><option value="">All types</option><option value="Quotation">Quotation</option><option value="Estimate">Estimate</option><option value="Invoice">Bill</option></select><select id="ds" aria-label="Status"><option value="">All status</option><option value="draft">Drafts</option><option value="final">Completed</option></select><select id="do" aria-label="Sort"><option value="new">Newest</option><option value="old">Oldest</option></select></div>
+<div class="dbk"><button class="btn ghost" id="bkp">Back up data</button><button class="btn ghost" id="rst">Restore backup</button><input type="file" id="rstf" accept=".json,application/json" hidden></div>
+<div class="rtn" id="bkmsg">Your data is stored only on this phone. Back it up regularly.</div><div class="rtn" id="dcount"></div>
+<div id="dl"></div></div></div>
+
+<script>
+const $=id=>document.getElementById(id);
+let q=0,ready=false,tm=null,lastTotal=0,kadcoOK=null,MODE='ls',C={docs:[],customers:[],meta:{}},pq=Promise.resolve();
+const IDB={db:null,
+ open(){return new Promise((res,rej)=>{if(!window.indexedDB)return rej(new Error('IndexedDB is not available'));const r=indexedDB.open('vk_billing',1);r.onupgradeneeded=()=>{const d=r.result;d.createObjectStore('docs',{keyPath:'id'});d.createObjectStore('customers',{keyPath:'n'});d.createObjectStore('meta',{keyPath:'k'})};r.onsuccess=()=>{IDB.db=r.result;res()};r.onerror=()=>rej(r.error);r.onblocked=()=>rej(new Error('Database is blocked'))})},
+ all(st){return new Promise((res,rej)=>{const g=IDB.db.transaction(st).objectStore(st).getAll();g.onsuccess=()=>res(g.result);g.onerror=()=>rej(g.error)})},
+ tx(ops){return new Promise((res,rej)=>{const t=IDB.db.transaction([...new Set(ops.map(o=>o[0]))],'readwrite');ops.forEach(([s,m,v])=>t.objectStore(s)[m](v));t.oncomplete=()=>res();t.onerror=()=>rej(t.error);t.onabort=()=>rej(t.error)})}
+};
+function persist(ops){pq=pq.then(()=>IDB.tx(ops)).catch(e=>{ind('Could not save to phone storage: '+((e&&e.message)||e),true)})}
+function diff(oldA,newA,key,st){const om=new Map(oldA.map(x=>[x[key],JSON.stringify(x)])),nk=new Set(),ops=[];
+ for(const x of newA){nk.add(x[key]);if(om.get(x[key])!==JSON.stringify(x))ops.push([st,'put',JSON.parse(JSON.stringify(x))])}
+ for(const k of om.keys())if(!nk.has(k))ops.push([st,'delete',k]);
+ if(ops.length)persist(ops)}
+const store=(()=>{const ls={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+ return{
+  get(k,d){if(MODE!=='idb')return ls.get(k,d);if(k==='vk_docs')return C.docs.slice();if(k==='vk_cust')return C.customers.slice();return k in C.meta?C.meta[k]:d},
+  set(k,v){if(MODE!=='idb'){ls.set(k,v);return}
+   if(k==='vk_docs'){diff(C.docs,v,'id','docs');C.docs=v.slice();return}
+   if(k==='vk_cust'){diff(C.customers,v,'n','customers');C.customers=v.slice();return}
+   C.meta[k]=v;persist([['meta','put',{k,v}]])},
+  metaAll(){if(MODE!=='idb'){const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(/^vk_(count_|seller3|theme)/.test(k))o[k]=ls.get(k)}return o}const o={};for(const k in C.meta)if(k.startsWith('vk_'))o[k]=C.meta[k];return o}
+ }})();
+const pre={Quotation:'QT',Estimate:'EST',Invoice:'INV'},ttl={Quotation:'Quotation',Estimate:'Estimate',Invoice:'Tax Invoice'};
+let type='Quotation',items=[],cur=null;
+const fmt=n=>(+n||0).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+function inr(n){const r=Math.floor(n+1e-9),p=Math.round((n-r)*100),a=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'],b=['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+const t=x=>x<20?a[x]:b[Math.floor(x/10)]+(x%10?' '+a[x%10]:''),h=x=>(x>99?a[Math.floor(x/100)]+' hundred'+(x%100?' ':''):'')+(x%100?t(x%100):'');
+let s='',m=r;[[1e7,'crore'],[1e5,'lakh'],[1e3,'thousand']].forEach(([v,w])=>{if(m>=v){s+=h(Math.floor(m/v))+' '+w+' ';m%=v}});s+=m?h(m):'';if(!r)s='Zero';
+return 'GRAND TOTAL IN WORDS: - INR '+s.trim()+' and '+(p?t(p):'Zero')+' Paise only.'}
+function seqOf(n){const m=/\/(\d+)$/.exec(n||'');return m?+m[1]:0}
+function nextSeq(t){return Math.max(store.get('vk_count_'+t,0),...store.get('vk_docs',[]).filter(x=>x.type===t).map(x=>seqOf(x.num)),0)+1}
+function nextNum(){return pre[type]+'/'+new Date().getFullYear()+'/'+String(nextSeq(type)).padStart(3,'0')}
+function allocNum(t){const n=nextSeq(t);store.set('vk_count_'+t,n);return pre[t]+'/'+new Date().getFullYear()+'/'+String(n).padStart(3,'0')}
+function releaseNum(d){const n=seqOf(d.num),k='vk_count_'+d.type;if(n&&store.get(k,0)===n)store.set(k,n-1)}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
+function size(){document.querySelectorAll('.sheet textarea').forEach(t=>{t.style.height='auto';t.style.height=t.scrollHeight+'px'})}
+function render(){
+ $('rows').innerHTML=items.map((it,i)=>`<tr><td class="c">${i+1}.</td><td data-l="Description"><textarea rows="1" data-i="${i}" data-k="d">${esc(it.d)}</textarea><button type="button" class="ofl noprint" data-ofc="${i}">Official rate</button></td><td data-l="Qty"><div class="qu"><input type="number" min="0" step="any" data-i="${i}" data-k="q" value="${it.q}"><input data-i="${i}" data-k="u" value="${esc(it.u)}" aria-label="Unit"></div></td><td data-l="Rate"><input id="r${i}" type="number" min="0" step="any" data-i="${i}" data-k="r" value="${it.r}"></td><td data-l="Amount"><input id="a${i}" type="number" min="0" step="any" data-i="${i}" data-k="a"></td><td class="noprint"><button class="x" data-del="${i}" aria-label="Remove item">×</button></td></tr>`).join('')+'<tr class="fill"><td></td><td></td><td></td><td></td><td></td><td class="noprint" style="border:0"></td></tr>';
+ calc();size()}
+function calc(){
+ const est=type==='Estimate',g=est?0:(+$('gst').value||0),d=+$('disc').value||0,tr=+$('trans').value||0,ad=+$('adv').value||0,inc=$('incl').checked,mode=$('gtype').value;let T=0;
+ items.forEach((it,i)=>{const gross=it.q*it.r;T+=inc?gross/(1+g/100):gross;
+  const e=$('a'+i);if(e&&document.activeElement!==e)e.value=gross?gross.toFixed(2):'';
+  });
+ const dd=inc?d/(1+g/100):d,base=Math.max(T-dd,0),gt=base*g/100,tot=base+gt+tr,sh=(id,on,v)=>{$(id).style.display=on?'':'none';if(on&&v!=null)$('v'+id.slice(1)).textContent=v};
+ $('tv').textContent=fmt(T);$('ltv').textContent=est?'Sub Total':'Total Taxable Value';$('rtv').style.display=est&&!(d>0||tr>0)?'none':'';$('rg1').style.display=est?'none':'';sh('rd',d>0);$('vd').textContent=fmt(dd);
+ $('l1').textContent=(mode==='in'?'CGST@'+g/2:mode==='out'?'IGST@'+g:'GST@'+g)+'%';$('v1').textContent=fmt(mode==='in'?gt/2:gt);
+ $('rg2').style.display=mode==='in'&&!est?'':'none';$('l2').textContent='SGST@'+g/2+'%';$('v2').textContent=fmt(gt/2);
+ $('rt').style.display=tr>0?'':'none';$('vt').textContent=fmt(tr);
+ $('grand').textContent=fmt(tot);$('ra').style.display=ad>0?'':'none';$('va').textContent=fmt(ad);$('rb').style.display=ad>0?'':'none';$('bal').textContent=fmt(tot-ad);
+ $('words').textContent=inr(tot);lastTotal=tot;touch()}
+function setType(t){type=t;document.querySelectorAll('#type button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
+ $('title').textContent=ttl[t];if(!cur)$('num').value=nextNum();if(!cur&&t==='Quotation')$('incl').checked=true;$('sheet').classList.toggle('est',t==='Estimate');document.querySelectorAll('.gstopt').forEach(e=>e.style.display=t==='Estimate'?'none':'');if($('rows').firstChild)calc()}
+function _fresh(){cur=null;items=[{d:'',u:'nos',q:1,r:0}];['cname','caddr','cphone','cgst','ref'].forEach(i=>$(i).value='');pick(0);$('cpick').value='0';
+ $('disc').value=0;$('trans').value=0;$('adv').value=0;$('gst').value=18;$('incl').checked=false;$('gtype').value='one';
+ $('date').valueAsDate=new Date();setType(type);render()}
+const FK=['sname','saddr','sphone','sgst','semail','cname','caddr','cphone','cgst','ref','disc','gst','trans','adv','gtype'];
+function snap(){return{id:cur||Date.now(),type,inc:$('incl').checked,num:$('num').value,date:$('date').value,items:items.map(x=>({...x})),total:lastTotal,f:Object.fromEntries(FK.map(k=>[k,$(k).value]))}}
+function _load(d){cur=d.id;type=d.type;items=d.items.map(x=>({...x}));Object.entries(d.f).forEach(([k,v])=>{const e=$(k);if(e)e.value=v});$('incl').checked=!!d.inc;$('cpick').value='';$('num').value=d.num;$('date').value=d.date;setType(d.type);render();scrollTo(0,0)}
+function list(){if(!$('docov').hidden)renderDocs()}
+$('type').onclick=e=>{const t=e.target.dataset.t;if(!t||t===type)return;
+ const d=cur&&store.get('vk_docs',[]).find(x=>x.id===cur);
+ if(d&&d.status!=='draft'){alert('This document is already saved. Use Duplicate in Documents to make a '+ttn[t].toLowerCase()+' from it.');return}
+ if(d)releaseNum(d);
+ setType(t);if(d){$('num').value=allocNum(t);touch()}};
+$('rows').addEventListener('input',e=>{const t=e.target,i=t.dataset.i;if(i==null)return;const k=t.dataset.k,it=items[i];
+ if(k==='a'){const v=+t.value||0;it.r=it.q?v/it.q:0;$('r'+i).value=it.r?+it.r.toFixed(4):''}
+ else it[k]=(k==='q'||k==='r')?(+t.value||0):t.value;if(k==='d')sug(t,i);calc()});
+$('rows').addEventListener('click',e=>{const i=e.target.dataset.del;if(i!=null){items.splice(i,1);if(!items.length)items.push({d:'',u:'nos',q:1,r:0});render()}});
+['gst','incl','gtype','disc','trans','adv'].forEach(i=>{$(i).oninput=calc;$(i).onchange=calc});
+$('add').onclick=()=>{items.push({d:'',u:'nos',q:1,r:0});render()};
+$('new').onclick=()=>{flushNow();fresh()};
+$('print').onclick=()=>{const t=document.title;document.title=(($('num').value||'document')+' '+($('cname').value||'')).trim().replace(/[\/\\:*?"<>|]/g,'-');print();setTimeout(()=>document.title=t,500)};
+$('theme').onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).getPropertyValue('--bg').trim()==='#2a1d12';r.dataset.theme=d?'light':'dark';store.set('vk_theme',r.dataset.theme)};
+$('save').onclick=()=>{if(!meaningful()){ind('Add at least one item first',true);return}clearTimeout(tm);autosave(true);$('save').textContent='Saved';setTimeout(()=>$('save').textContent='Save',1200);homeList()};
+
+document.addEventListener('input',e=>{if(e.target.tagName==='TEXTAREA'){e.target.style.height='auto';e.target.style.height=e.target.scrollHeight+'px'}});
+function applyPrefs(){const th=store.get('vk_theme',null);if(th)document.documentElement.dataset.theme=th;const sl=store.get('vk_seller3',null);if(sl)Object.entries(sl).forEach(([k,v])=>{const e=$(k);if(e)e.value=v})}
+
+const PDFCSS='html,body{margin:0;background:#fff;width:794px}body{padding:0!important}body::before{display:none}.sheet{width:794px;max-width:none;border:0;padding:34px 40px 0;margin:0}.tw{overflow:visible}.bt{min-width:0}';
+async function makePdf(){
+ const btn=$('pdf');btn.disabled=true;btn.textContent='Preparing…';let fr;
+ try{
+  const src=$('sheet'),cl=src.cloneNode(true),a=[...src.querySelectorAll('input,textarea')],b=[...cl.querySelectorAll('input,textarea')];
+  b.forEach((el,i)=>{const o=a[i];let v=o.value;
+   if(o.classList.contains('opt')){if(!v){el.remove();return}v=(o.dataset.pre||'')+v}
+   if(o.type==='date'&&v){const p=v.split('-');v=p[2]+'/'+p[1]+'/'+p[0]}
+   if((o.dataset.k==='a'||o.dataset.k==='r')&&v)v=fmt(v);
+   const d=document.createElement('div');d.className=(o.className+' v').trim();d.dataset.t=o.type||o.tagName.toLowerCase();d.textContent=v;el.replaceWith(d)});
+  cl.querySelectorAll('.noprint').forEach(e=>e.remove());
+  const css=[...document.querySelectorAll('style')].map(s=>s.textContent).join('\n');
+  const html='<!DOCTYPE html><html data-theme="light"><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&family=Tinos:wght@400;700&display=swap" rel="stylesheet"><style>'+css+'</style><style>'+PDFCSS+'</style></head><body>'+cl.outerHTML+'</body></html>';
+  fr=document.createElement('iframe');fr.style.cssText='position:fixed;left:-9999px;top:0;width:794px;height:1200px;border:0';document.body.appendChild(fr);
+  await new Promise(r=>{fr.onload=r;fr.srcdoc=html});
+  const doc=fr.contentDocument;
+  await Promise.all(['800 38px Bitter','700 15px Tinos','400 15px Tinos'].map(f=>doc.fonts.load(f).catch(()=>0)));
+  await new Promise(r=>setTimeout(r,300));
+  const used=[...doc.querySelectorAll('#rows tr:not(.fill)')].reduce((s,r)=>s+r.offsetHeight,0),fl=doc.querySelector('#rows tr.fill td');if(fl)fl.style.height=Math.max(30,400-used)+'px';
+  const H=doc.body.scrollHeight;fr.style.height=H+'px';
+  const canvas=await html2canvas(doc.body,{scale:2,backgroundColor:'#fff',width:794,height:H,windowWidth:794,windowHeight:H});
+  const s=canvas.width/794,PH=Math.floor(794*297/210),cands=[...doc.querySelectorAll('#rows tr,.tt,.wd,.refrow,.to,.dt,.rule')].map(e=>Math.round(e.getBoundingClientRect().bottom)).sort((x,y)=>x-y);
+  const br=[0];let st=0;while(H-st>PH){let en=st+PH;const ok=cands.filter(c=>c>st+PH*0.5&&c<=en);if(ok.length)en=ok[ok.length-1];br.push(en);st=en}br.push(H);
+  const pdf=new window.jspdf.jsPDF({unit:'mm',format:'a4',orientation:'portrait'});
+  for(let p=0;p<br.length-1;p++){const y0=br[p],h=br[p+1]-y0,c=document.createElement('canvas');c.width=canvas.width;c.height=Math.round(h*s);const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(canvas,0,Math.round(y0*s),canvas.width,c.height,0,0,c.width,c.height);if(p)pdf.addPage();pdf.addImage(c.toDataURL('image/jpeg',.95),'JPEG',0,0,210,h/794*210)}
+  const name=(($('num').value||'document')+' '+($('cname').value||'')).trim().replace(/[\/\\:*?"<>|]/g,'-');
+  await saveFile(name+'.pdf',pdf.output('blob'));
+ }catch(e){if(!e||(e.code!=='declined'&&!/cancel/i.test(String(e.message||e))))alert('Could not create the PDF: '+((e&&e.message)||e))}
+ finally{if(fr)fr.remove();btn.disabled=false;btn.textContent='Download PDF'}
+}
+$('pdf').onclick=makePdf;
+function buildHtml(){
+ const src=$('sheet'),cl=src.cloneNode(true),a=[...src.querySelectorAll('input,textarea')],b=[...cl.querySelectorAll('input,textarea')];
+ b.forEach((el,i)=>{const o=a[i];let v=o.value;
+  if(o.classList.contains('opt')){if(!v){el.remove();return}v=(o.dataset.pre||'')+v}
+  if(o.type==='date'&&v){const p=v.split('-');v=p[2]+'/'+p[1]+'/'+p[0]}
+  if((o.dataset.k==='a'||o.dataset.k==='r')&&v)v=fmt(v);
+  const d=document.createElement('div');d.className=(o.className+' v').trim();d.dataset.t=o.type||o.tagName.toLowerCase();d.textContent=v;el.replaceWith(d)});
+ cl.querySelectorAll('.noprint').forEach(e=>e.remove());
+ const css=[...document.querySelectorAll('style')].map(s=>s.textContent).join('\n');
+ return '<!DOCTYPE html><html data-theme="light"><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&family=Tinos:wght@400;700&display=swap" rel="stylesheet"><style>'+css+'</style><style>'+PDFCSS+'</style></head><body>'+cl.outerHTML+'</body></html>'}
+async function preview(){
+ const btns=[$('prev')];btns.forEach(b=>b.disabled=true);
+ const old=$('pvov');if(old)old.remove();
+ try{
+  const html=buildHtml(),ov=document.createElement('div');ov.id='pvov';ov.style.cssText='position:fixed;inset:0;z-index:50;background:#2b2b2b;overflow:auto;padding-top:env(safe-area-inset-top,0px)';
+  ov.innerHTML='<div style="position:sticky;top:0;z-index:2;background:#000;display:flex;gap:8px;padding:8px 10px;align-items:center"><b style="color:#fff;margin-right:auto;font:600 15px system-ui">Preview</b><button class="btn ghost" id="pvclose" style="color:#fff">Close</button><button class="btn" id="pvpdf">Download PDF</button></div><div id="pvbox" style="margin:10px auto;background:#fff;overflow:hidden"></div>';
+  document.body.appendChild(ov);
+  $('pvclose').onclick=()=>ov.remove();$('pvpdf').onclick=()=>{ov.remove();makePdf()};
+  const box=$('pvbox'),fr=document.createElement('iframe');fr.style.cssText='width:794px;border:0;transform-origin:0 0;display:block';box.appendChild(fr);
+  await new Promise(r=>{fr.onload=r;fr.srcdoc=html});
+  const doc=fr.contentDocument;
+  await Promise.all(['800 38px Bitter','700 15px Tinos','400 15px Tinos'].map(f=>doc.fonts.load(f).catch(()=>0)));
+  await new Promise(r=>setTimeout(r,250));
+  const used=[...doc.querySelectorAll('#rows tr:not(.fill)')].reduce((s,r)=>s+r.offsetHeight,0),fl=doc.querySelector('#rows tr.fill td');if(fl)fl.style.height=Math.max(30,400-used)+'px';
+  const H=doc.body.scrollHeight,k=Math.min(1,(innerWidth-20)/794);
+  fr.style.height=H+'px';fr.style.transform='scale('+k+')';box.style.width=(794*k)+'px';box.style.height=(H*k)+'px';
+ }catch(e){alert('Could not open the preview: '+((e&&e.message)||e))}
+ finally{btns.forEach(b=>b.disabled=false)}
+}
+$('prev').onclick=preview;
+let smp=null;
+if(window.claude){claude.use('sample').then(s=>{smp=s;if(!s)$('scan').style.display='none'}).catch(()=>{$('scan').style.display='none'})}else $('scan').style.display='none';
+function shrink(file,max=1800){return new Promise((res,rej)=>{const fr=new FileReader();fr.onerror=()=>rej(new Error('Could not read the image'));fr.onload=()=>{const img=new Image();img.onerror=()=>rej(new Error('Could not open the image'));img.onload=()=>{const k=Math.min(1,max/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext('2d').drawImage(img,0,0,c.width,c.height);c.toBlob(b=>b?res(b):rej(new Error('Could not prepare the image')),'image/jpeg',.88)};img.src=fr.result};fr.readAsDataURL(file)})}
+const SCANPROMPT='The attached image is a photo of a handwritten rough bill or quotation from a wood furniture workshop in Kerala, India. Read it carefully and return ONLY JSON in this shape: {"customer": string or null, "items": [{"description": string, "unit": string, "qty": number, "rate": number, "amount": number}], "written_total": number or null}. Rules: one item per work or line; keep sizes such as 180x30x45 in the description; expand HW to Hardwood, AW to Anjili wood and TW to Teak wood; the unit defaults to nos; a line like "80 nos x 1900 = 152000" means qty 80, rate 1900, amount 152000; ignore running sums and put the grand total only in written_total; if only qty and amount are given, still return both and leave rate 0; if a number is unreadable use 0; never invent items.';
+$('scan').onclick=()=>$('scanfile').click();
+$('scanfile').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f||!smp)return;
+ const m=$('scanmsg'),b=$('scan');m.textContent='Reading the handwriting…';b.disabled=true;
+ try{
+  const blob=await shrink(f);
+  const data=await smp.json(SCANPROMPT,{images:blob,cache:false,modelTier:'default'});
+  const list=(data&&data.items)||[];if(!list.length)throw new Error('No items found in the image');
+  type='Estimate';fresh();
+  items=list.map(i=>{let q=+i.qty||0,r=+i.rate||0;const a=+i.amount||0;if(!r&&q&&a)r=a/q;if(!q&&r&&a)q=a/r;return{d:String(i.description||''),u:String(i.unit||'nos'),q:q||1,r:r||0}});
+  if(data.customer){$('cname').value=data.customer;$('caddr').value='';$('cpick').value=''}
+  render();
+  const sum=items.reduce((s,i)=>s+i.q*i.r,0);let msg='Filled '+items.length+' items as an estimate. Check every line against the paper, because handwriting can be misread.';
+  if(data.written_total&&Math.abs(data.written_total-sum)>1)msg+=' The total written on the note ('+fmt(data.written_total)+') differs from the items total ('+fmt(sum)+').';
+  m.textContent=msg;
+ }catch(err){m.textContent=err&&err.code==='not_granted'?'Permission to use AI was not given.':'Could not read the bill: '+((err&&err.message)||err)}
+ finally{b.disabled=false}
+};
+const DEFC=[{n:'KERALA ARTISANTS DEVELOPMENT CORPATION LTD',a:'DISTRICT DEVELOPMENT OFFICE\nIRNAV, KANNUR'}];
+function custs(){return [...DEFC,...store.get('vk_cust',[])]}
+function fillPick(){$('cpick').innerHTML='<option value="">— Blank —</option>'+custs().map((x,i)=>'<option value="'+i+'">'+esc(x.n)+'</option>').join('')}
+function pick(i){const x=custs()[i];$('cname').value=x?x.n:'';$('caddr').value=x?x.a:'';$('cgst').value=(x&&x.g)||'';$('cphone').value=(x&&x.p)||'';size();touch()}
+$('cpick').onchange=()=>pick($('cpick').value);
+$('csave').onclick=()=>{const n=$('cname').value.trim();if(!n)return;const l=store.get('vk_cust',[]),o={n,a:$('caddr').value,g:$('cgst').value,p:$('cphone').value},j=l.findIndex(x=>x.n===n);if(j>=0)l[j]=o;else l.push(o);store.set('vk_cust',l);fillPick();$('cpick').value=String(DEFC.length+(j>=0?j:l.length-1));$('csave').textContent='Saved';setTimeout(()=>$('csave').textContent='Save customer',1200)};
+const RAW=`19|T23|1287|Teak wood wall panelling (per sq.ft)
+19|T23|1522|Teak wood floor panelling (per sq.ft)
+19|T23|1132|Room partition work, teak frame 2.5"x2.5" 4mm glass 6mm laminated board (per sq.ft)
+19|T23|30198|Teak wood 2 tier steel cot 190x90x170 cm
+19|T23|17820|Teak wood round table 0.75x1.20 dia
+19|T23|12471|Teak wood teapoy 90x60x45 cm, 9mm glass
+19|T23|48054|Teak wood settee set, 3 seat + 2 single seat executive
+19|T23|6549|Teak wood arm chair
+19|T23|6833|Teak wood arm chair, cane seat and back
+19|T23|8533|Teak wood chair, semi cushion
+19|T23|24666|Teak wood office table 120x60x75 cm, 3 side covering, one drawer, one cupboard, lock and handle
+19|T23|6942|Teak wood white writing board 120x60x3 cm
+19|T23|23606|Teak wood office table 120x60x75 cm, 3 side covering, one drawer and one cupboard
+19|T23|6851|Teak wood box 45x30x20 cm, 7mm panel, lock and handle
+19|T23|10083|Teak wood designation board 156x61 cm, vinyl lettering
+19|T23|2463|Teak wood designation board 45x10 cm, vinyl lettering
+20|T23|2744|Teak wood wall cup board, 15mm panel box, melamine polish
+20|T23|29184|Teak wood table for dias 180x90x75
+20|T23|29184|Teak wood dias table 240x60x75 cm, 3 side covering, open compartment
+20|T23|62163|Teak wood dias table 300x60x75 cm, 3 side covering, open compartment
+20|T23|9055|Teak wood slope desk 120x42.5x77 cm, open compartments
+20|T23|14409|Teak wood slope desk 120x42.5x77 cm, 3 side full covering
+20|T23|1386|Teak wood bench with back rest 120x40x90 cm
+20|T23|39427|Teak wood witness box 90x120x90 cm, including platform
+20|T23|33026|Teak wood witness box 90x120x90 cm, excluding platform
+20|T23|46200|Accused box 90x120x120 cm, including platform
+20|T23|31625|Accused box 90x120x120 cm, excluding platform
+21|H23|3600|Hardwood arm chair, plank seat
+21|H23|3950|Hardwood arm chair, cane seat and back
+21|H23|6200|Hardwood chair, semi cushion
+21|H23|6408|Hardwood desk 180x40x75 cm, CR steel pipe and HW top
+21|H23|7541|Hardwood desk 120x60x75 cm, CR steel pipe, AW/HW top and book rack
+21|H23|4375|Hardwood bench 120x30x45 cm, CR pipe, AW/HW top
+21|H23|5565|Executive multi purpose table 120x25x75 cm, CR pipe and sheet
+21|H23|1200|Setting up of office accommodation, wood and plywood partition (cubicle) per sq.ft
+21|H23|13797|Hardwood office table 120x60x75 cm, 3 side covering, one drawer, one cupboard
+21|H23|9544|Hardwood single cot 198x90x45 cm, 8mm plywood on top
+21|H23|9775|Hardwood single cot 198x90x45 cm, 8mm plank on top
+21|H23|1575|Full plywood wall cupboard, 18mm marine ply box, 18mm MDF door, painting (per sq.ft)
+21|H23|8740|Hardwood white writing board 180x90x3 cm
+21|H23|7238|Hardwood white writing board 120x60x3 cm
+21|H23|5731|Hardwood Jefferson type chair, one fixed plank arm, plank seat and back
+21|H23|11990|Hardwood slope desk 180x42.5x77 cm, open compartment, plank leg
+21|H23|11190|Hardwood bench with rest, plank leg 180x90x40 cm
+21|H23|1270|Hardwood partition, 7cm square frame, 15mm panelling, melamine spray polish (per sq.ft)
+22|H23|1150|Marine plywood partition, 12mm frame, 6mm marine ply, melamine spray polish (per sq.ft)
+22|H23|14658|Hardwood office table 120x60x25 cm, 3 side covering, one drawer, one cupboard, lock and handle
+22|H23|21477|Hardwood witness box 90x120x90 cm, including platform
+22|H23|16500|Hardwood witness box 90x120x90 cm, excluding platform
+22|H23|22000|Accused box 90x120x120 cm, including platform
+22|H23|16500|Accused box 90x120x120 cm, excluding platform
+23|S23|6884|Steel slotted angle iron back rack 8 panel 240x90x45 cm
+23|S23|9147|Steel cot 190x90x45 cm, powder coated
+23|S23|7489|Steel cot 190x90x45 cm, 9mm plywood top, paint finish
+23|S23|6932|Steel cot 190x90x45 cm, 6mm plywood top
+23|S23|11725|Steel cot 190x75x45 cm, plank top
+23|S23|17773|Steel two tier cot 190x90x162 cm, powder coating
+23|S23|16676|Steel two tier cot 190x75x162 cm, plank top
+23|S23|17108|Steel two tier cot 190x75x162 cm, powder coated
+23|S23|11045|SS dining table 180x45x75 cm
+23|S23|14033|SS dining table 150x90x75 cm
+23|S23|14751|SS dining table 150x90x75 cm, granite top
+23|S23|9748|Plain table, steel frame wooden top 180x90x75 cm
+23|S23|10956|Work table, steel frame, 2.5cm wooden top 120x60x90 cm
+23|S23|7108|Steel plain table, wooden top 90x60x75 cm
+23|S23|4511|Executive chair, S type, cushioned
+23|S23|2898|Perforated sheet visitors chair, single seat
+24|S23|5566|Perforated sheet visitors chair, two seater
+24|S23|8376|Perforated sheet visitors chair, three seater
+24|S23|15638|Perforated sheet visitors chair, 3 seated stainless steel
+24|S23|1598|Steel stool 30x30x45 cm
+24|S23|4334|White board with aluminium frame 150x90 cm
+24|S23|3055|Stadium bucket chair, blow moulded HDPE, UV resisting
+24|S23|5359|Stadium bucket chair, auto tip-up, aluminium diecast, arm rest
+24|S23|9234|Auditorium chair, push back, foldable writing pad
+24|S23|9260|Auditorium chair, push back, auto tip-up, cup holder
+24|S23|27720|Mobile compactor racks 90x38x215 cm, adjustable shelves
+24|S23|36027|L shape sharing + work station (4 seater) 1500x1500x1200
+24|S23|21613|Work station L shape 150x150x60x120H cm, CRCA frame, PLB top
+24|S23|10224|Work station linear 120x60x120 cm, CRCA frame, PLB top
+24|S23|5300|Waste bin single collection 120x45x45 cm, with roof
+24|S23|6088|Waste bin single collection 120x60x60 cm, with roof
+25|S23|25000|Material collection facility unit 160x80x210 cm, single compartment
+25|S23|29000|Material collection facility unit 160x80x210 cm, two compartments
+25|S23|32500|Material collection facility unit 160x160x210 cm, two compartments
+25|S23|40500|Material collection facility unit 250x80x210 cm, three compartments
+26|S23|69000|Material collection facility unit 250x160x210 cm, three compartments
+26|S23|18500|Material collection facility unit 80x80x210 cm, single door
+26|S23|245|Aluminium partition 2 1/2 x 1 1/2 section, 6mm laminated MDF (per sq.ft)
+26|S23|400|Aluminium door, super sliding 2 track, 4mm glass (per sq.ft)
+26|S23|350|Aluminium windows, super sliding 2 track, 4mm glass (per sq.ft)
+26|S23|2805|Steel writing pad chair, mesh seat and back MDF, full writing pad
+26|S23|3216|Steel writing pad chair, mesh seat, rubwood full writing pad
+26|S23|3787|Low back revolving computer chair, manual lifting
+26|S23|1770|Writing pad chair 3/4" model half pad
+26|S23|8802|Tilting drawing board 90x60x100 cm, stand and HW top
+26|S23|4416|Library rack, 4 panel
+26|S23|10246|Podium stand, powder coated, light fitting
+27|S23|16771|Library reading table 6x3 ft, GP square, 18mm marine plywood laminated
+27|S23|5639|Writing pad chair 45x45x75 cm, arm rest, cushion seat and back
+27|S23|5069|Half writing chair 45x45x75 cm, arm rest, fixed plank
+27|S23|4997|Bench 180x30x45 cm, GI square pipe frame, hardwood/rubwood top polish
+27|S23|5925|Desk 180x40x75 cm, GI square tube frame, hardwood/rubwood top polish
+27|S23|9515|Steel foldable cot 190x90x45 cm, powder coated
+27|S23|19235|Stainless steel foldable cot 190x90x45 cm
+27|S23|375|Roofing work, GI tubes and 0.6mm aluminium trafford sheet (per sq.ft)
+27|S23|13882|High back chair, adjustable head rest and arm rest, hydraulic lift, mesh
+27|S23|11138|High back chair, head rest, lumbar support, mesh
+27|S23|7462|Medium back chair, adjustable lumbar and arm rest, hydraulic lift, mesh
+27|S23|5494|Medium back chair, fixed PP arms, gas lift, tilt mechanism
+28|S23|5057|Visitors chair, S type frame, mesh back, cushioned seat, lumbar adjuster
+28|S23|4496|Visitors chair, S type frame, mesh back, cushioned seat, fixed arm rest
+28|S23|32340|Cash chest 22x16x19 inch
+28|S23|46200|Cash chest 36x23x23 inch
+28|S23|23087|Iron chest 40x45x45 cm
+28|S23|34056|Corner sofa set 2100/1800 x 750 x 900 mm, PU foam, fabric/letherite
+28|S23|6515|Conference table 11.80x0.75x0.75 cm (7.97 m2)
+28|S23|95|Providing false ceiling, PVC sheet (per sq.ft)
+28|S23|135|Providing false ceiling, gypsum board with painting (per sq.ft)
+29|C23|7087|Steel bench with back rest 180x30x75 cm
+29|C23|8990|Steel desk with book rack 180x40x75 cm
+29|C23|5089|Steel bench with back rest 90x30x75 cm
+29|C23|6549|Steel desk with book rack 90x40x75 cm
+29|C23|10128|Two seater students table with two individual chairs 120x40x70 cm, rectangular tube, HDPE shell
+29|C23|10544|Two seater students table with two individual chairs 120x40x70 cm, square tube, HDPE shell
+29|C23|9304|Combined steel desk with book rack 90x40x60 / 90x30x30 cm
+30|C23|9518|Steel desk with book rack 90x40x75 cm, bench 90x30x75 cm
+30|C23|4770|Hardwood slope desk with shelf 90x45x75 cm
+30|C23|7923|Teachers table 90x60x75 cm, hardwood frame, 3 side 18mm marine ply, paint/polish
+30|C23|6909|Teachers table 90x60x75 cm, 18mm marine laminated ply, one drawer, 3 side covering
+30|C23|8019|Teachers table 90x60x75 cm, hardwood frame, 18mm ply, single drawer
+30|C23|3628|Display rack 3 pieces 90x30 cm, 18mm marine laminated ply
+30|C23|4279|Magazine rack 3 layers 30x50x90 cm
+30|C23|5567|Magazine rack 30x150 cm, GP square with mesh racks
+30|C23|7460|Stainless steel magazine rack 50x150 cm
+30|C23|3509|Hardwood arm chair, plank seat and reeper back
+30|C23|2558|Visitors chair, 25mm round pipe, cushion seat, back side net
+30|C23|3795|Visitors chair, PU arm, cushion seat and back, 25mm pipe
+30|C23|4855|Chair, bent wood cushion seat and back
+31|C23|2342|Chair, stainless steel 18mm pipe, cushion seat and back
+31|C23|58500|Dias table 300x60x75 cm, 18mm marine ply, 10 open compartments, melamine spray polish
+31|C23|13542|Wooden podium 120x60x40 cm, hardwood, one drawer, open compartment
+31|C23|13167|Steel podium 120x60x40 cm, steel frame laminated board
+31|C23|14597|Steel podium with light 120x60x40 cm
+31|C23|338|Plain glass partition 12mm (per sq.ft)
+31|C23|755|Plain glass door 12mm (per sq.ft)
+31|C23|454|Toughened glass partition 12mm (per sq.ft)
+31|C23|936|Toughened glass door 12mm (per sq.ft)
+31|C23|36540|Chemistry lab table 150x120x90 cm, granite top, glass door, ceramic sink
+31|C23|512|Wall panelling, wood veneer (per sq.ft)
+31|C23|388|Wall panelling, laminates (per sq.ft)
+31|C23|660|Wall panelling, wood veneer with acoustic insulation (per sq.ft)
+31|C23|3500|Arm chair, Aanjali wood
+31|C23|5188|Arm chair, Aanjali wood, cane seat and back
+31|C23|675|Partition ply with mica two sides, 18mm ply 6mm ply 0.8 mica, 7cm thick (per sq.ft)
+31|C23|816|Partition ply with two side veneer finish, 18mm ply 6mm ply 3mm veneer (per sq.ft)
+32|C23|1215|Cupboard ply with mica, 18mm marine ply, 6mm back, 0.8 mica (per sq.ft)
+32|C23|1485|Cupboard ply, outside wood finish, 18mm marine ply, 0.3 veneer spray polish (per sq.ft)
+32|C23|1155|Open box marine ply with mica, 18mm ply box, 6mm back (per sq.ft)
+32|C23|7000|Pre-laminated board office table 120x60x75 cm, 18mm, one drawer, one cupboard
+32|C23|9500|Pre-laminated board office table 137x75x75 cm, 18mm, drawer, cupboard, key board, cable manager
+32|C23|19550|Pre-laminated board L-shape office table 180x90x75 + 90x40 cm, 2 drawers, 2 cupboards
+32|C23|3751|Pre-laminated board computer table 90x40x75 cm, key board, CPU stand
+32|C23|1780|Hardwood engineering drawing board 90x75 cm
+32|C23|4930|Hardwood engineering drawing table 90x90x50 cm
+32|C23|6450|Hardwood drawing table with foot rest, hardwood plank top 600x425x24 mm
+32|C23|14200|Hardwood work bench for workshop 8'x4'
+32|C23|12200|Hardwood work bench for workshop 6'x4'
+32|C23|10500|Hardwood work bench for workshop 4'x4'
+33|C23|28212|Officer table 2100x1100/90x750 mm, 25mm pre-laminated particle board, side table with pedestal
+33|C23|11803|Side table 1350x450x725 mm
+33|C23|14784|Side unit 1600x400x1200 mm
+33|C23|26032|Officer table 1800x1050/900x750 mm, particle board, 2 drawers, cupboard, + side table 900x450x725
+33|C23|1500|Supply and installation, 6A two switch with 3 power socket, 8 module
+33|C23|1187|Supply and installation, 15A one switch with power socket module
+33|C23|2437|Supply and installation, 24W LED ceiling light, 2 year warranty
+33|C23|1581|Supply and installation, 22W LED ceiling light
+33|C23|1500|Supply and installation, 18W ceiling light, 2 year warranty
+33|C23|1342|Supply and installation, concealing works with eight way DB box
+33|C23|3575|Supply and installation, 63 amps ELCB
+33|C23|375|Supply and installation, 32 amps MCB
+34|C23|237|Supply and installation, 10 amps MCB
+34|C23|152|Supply and installation, 2.5 sqmm FRPVC copper cable 3 core with conduit
+34|C23|117|Supply and laying of CAT 6 cable with conduit
+34|C23|9750|Supply and installation, 24 port patch panel
+34|C23|23750|Supply of 19" 17U 600x800 mm floor mount rack
+34|C23|1125|Telephone without display for extension, Panasonic
+34|C23|84|Telephone cable 2 pair x 0.5 with conduit
+34|C23|100|Cabling 1 sqmm x 3 core with PVC conduit
+34|C23|100|Floor / wall chipping for conduits and concealing (per metre)
+34|C23|28|Wall texturing work (per sq.ft)
+34|C23|83|Curtain vertical blinds, fittings accessories (per sq.ft)
+34|C23|72|Curtain cloth, fittings accessories
+34|C23|55|Floor carpeting (per sq.ft)
+35|C23|45|Flooring vinyl (per sq.ft)
+35|C23|107|Stain free vitrified tile 2x2 and fixing (per number)
+35|C23|354|Panelling ply with mica, 18mm frame, 6mm ply, 0.8 mica (per sq.ft)
+35|C23|452|Panelling ply with veneer, 18mm frame, 6mm ply, 3mm veneer (per sq.ft)
+36|M23|2943|Revolving stool, MS with SS top
+36|M23|14300|Examination table, MS with SS top 182x53x81 cm
+36|M23|9800|Bed side locker SS 40x40x80 cm
+36|M23|20900|Labour table SS 182x75x75 cm
+36|M23|16900|Patient stretcher with trolley SS 198x53x76 cm
+36|M23|9700|Dressing trolley full SS 68x48x88 cm
+36|M23|7800|Bed side screen, 3 fold steel frame with cloth
+36|M23|9390|Wheel chair full MS 45x88 cm
+36|M23|21770|Full SS cot 98x75x45 cm
+36|M23|1893|Foot step double MS 45x28x20/40 cm
+36|M23|13541|Iron cot SS 180x90x60 cm
+36|M23|21700|Fowlers cot (head and leg bow SS) 198x90x50 cm
+36|M23|2850|Full SS drip stand
+36|M23|10700|By stander cot (SS) 180x53x45 cm
+36|M23|7422|Instrument trolley full SS 60x45x80 cm
+36|M23|18150|Stretcher one trolley full SS 198x53x76 cm
+36|M23|2440|Saline stand SS, 137 to 240 cm
+36|M23|2025|Saline stand MS with top SS, 137 to 240 cm
+36|M23|13233|Semi fowler cot 182x90x60 cm
+36|M23|8866|Hospital cot with dropped side guard 182x90x60 cm
+36|M23|15370|Medicine trolley with full SS 76x46x81 cm
+36|M23|1810|Oxygen trolley MS 90 cm height, 25 cm dia
+37|M23|5896|Mayos trolley full SS
+37|M23|39165|Instrument cabinet full SS 160x66x45 cm
+37|M23|8421|Plain table full SS 120x60x75 cm
+37|M23|3630|Multi purpose stool SS
+37|M23|7320|Baby cot with side guard 140x76x60 cm
+38|P23|8408|Hospital cot 190x90x60 cm, powder coated
+38|P23|11800|Semi fowler cot (1 section) 190x90x60 cm, side rails
+38|P23|15700|Semi fowler cot (2 section) 90x90x60 cm, 2 functions
+38|P23|13400|Hospital cot 190x90x60 cm, side rail, cushioned bed portion
+38|P23|10918|Hospital cot 190x90x60 cm, side rail, 16G perforated CR sheet bed
+38|P23|5517|By-stander cot 183x61x46 cm
+38|P23|4914|Examination table 196x56x76 cm
+38|P23|37000|Fowler's position ICU cot 203x91.5x56 cm, 3 functions
+38|P23|3200|Over bed table 106x45x91.5 cm
+38|P23|4000|Adjustable bed side locker 80x53 cm, MS with SS top
+38|P23|9000|Dressing trolley 65x46x76 cm with one movable basin
+38|P23|7414|Wheel chair seat and back cushion, powder coated
+38|P23|3866|Baby cradle with stand 91x25x30 cm
+38|P23|4329|Bed side screen, 3 fold
+38|P23|1975|Foot step double 51x45x30 cm
+38|P23|1647|Stool, multi purpose
+39|P23|4900|Steel cot, leg folding 190x76x45 cm
+39|P23|14300|Instrument cabinet 96x40x175 cm
+39|P23|6281|Wheel chair
+40|TW|6393|TW Bench 180x30x45 cm (plank leg)
+40|TW|7952|TW Desk 180x42.5x75 cm
+40|TW|3703|TW Armless chair, ratten seat and back
+40|TW|1387|TW Tray 40x30x10 cm
+40|TW|9096|TW S.D. table 90x60x75 cm
+40|TW|13785|TW D.D. table 120x75x75 cm
+40|TW|26179|TW Closed shelf 120x90x40 cm
+40|TW|13006|TW Black board with stand 120x90 cm
+40|TW|3567|TW Stool 45x45x45 cm
+40|TW|6592|TW Plain table 90x60x75 cm
+40|TW|34112|TW Almirah 180x90x40 cm
+40|TW|35291|TW Almirah 180x90x45 cm
+40|TW|25851|TW Rack 180x180x45 cm
+40|TW|5462|TW Black board stand 150x100 cm
+40|TW|17558|TW Plain table 180x90x75 cm
+40|TW|37016|TW Almirah 180x90x45 cm, 4 compartments and glass shutters
+41|TW|15295|TW Book shelf with door 120x90x30 cm
+41|TW|7363|TW Bench 180x45x45 cm (4 legs)
+41|TW|7057|TW Bench 150x45x45 cm (4 legs)
+41|TW|2516|TW Stool 40x40x45 cm
+41|TW|12886|TW Exam table 180x60x90 cm
+41|TW|9944|TW Cushion chair
+41|TW|20207|TW Reaper rack 180x180x45 cm
+41|TW|12934|TW Single cot with plywood top 200x90x45 cm
+41|TW|18039|TW Double cot with plywood top 200x125x45 cm
+41|TW|22244|TW Lab table 180x90x90 cm (top plank)
+41|TW|14665|TW Lab table 150x75x75 cm (plain)
+41|TW|55141|TW L shape officers table 180x90x75 cm
+41|TW|18371|TW Computer table (3 key boards)
+41|TW|13389|TW Computer table (2 key boards) 158x60x75 cm
+41|TW|10403|TW Bench with back rest 180x40x90 cm
+41|TW|4638|TW Typist chair (rattened seat and back)
+41|TW|9622|TW Typist table 105x70x70 cm (plain)
+41|TW|19009|TW Junior officers table 120x75x75 cm, 1 drawer and 1 cupboard
+41|TW|4903|TW Arm chair, plank seat and reaper back
+41|TW|11587|TW Notice board 120x90x10 cm, glass shutter
+41|TW|32167|TW Medicine rack 180x180x45 cm, 5 compartments, side protection
+41|TW|30797|TW Almirah 180x90x45 cm, 4 compartments, laminated plywood shutter
+42|TW|24477|TW Almirah 120x90x40 cm, 4 compartments, plank shutter
+42|TW|25864|TW Almirah 120x90x40 cm, 4 compartments, laminated plywood shutter
+42|TW|2460|TW Stool 35x35x50 cm
+42|TW|2988|TW Stool 40x40x50 cm
+42|TW|3135|TW Drawing stool 40x40x60 cm
+42|TW|8053|TW Record rack (reaper) 90x90x45 cm
+42|TW|21410|TW Executive revolving chair, cushion seat and back
+42|TW|6977|TW Easy chair 130x60 cm, fitted with canvas
+42|TW|6974|TW Arm chair with cushion seat and back
+42|TW|10956|TW Plain table 180x60x75 cm
+42|TW|30608|TW Almirah 180x90x30 cm, 5 compartments
+42|TW|9820|TW Judges chair, plastic seat and back
+42|TW|10008|TW Judges chair, cushion seat and back
+42|TW|7182|TW Students table 75x45x75 cm, with shelf
+42|TW|5417|TW Students table 75x45x75 cm, plain
+42|TW|7208|TW Map stand 120x90x40 cm
+42|TW|12687|TW Cot 180x75x45 cm
+42|TW|13095|TW Reading table 180x120x75 cm, plywood laminated sheet top
+42|TW|14071|TW Reaper rack 180x90x45 cm, 5 shelves
+42|TW|4534|TW Cloth stand 105x90x40 cm, aluminium rod fittings
+43|TW|20249|TW Reaper rack 180x180x45 cm, 4 compartments
+43|TW|33641|TW Medicine rack 180x180x45 cm, 5 compartments of planks, side partition
+43|TW|30658|TW Officers table 150x90x75 cm, 2 drawers and 2 cupboards
+43|TW|10691|TW Dining table 180x90x75 cm, laminated plywood top
+43|TW|3720|TW Baby bench 150x25x30 cm
+43|TW|35794|TW Officers table 180x120x75 cm, 2 drawers and 4 cupboards
+43|TW|32318|TW Almirah 180x90x45 cm, 5 compartments and glass shutter
+43|TW|13699|TW Lecture stand 120x60x40 cm
+43|TW|7793|TW Plain table 120x60x75 cm
+43|TW|11002|TW Slope desk 180x45x75 cm, with shelf
+43|TW|18760|TW Typist table 105x70x70 cm, one drawer, one cupboard
+43|TW|12195|TW Reading table 180x60x75 cm (plain)
+43|TW|7101|TW Slope desk with shelf and top folding 65x50x80/70 cm
+43|TW|8291|TW Computer table 90x60x75 cm, sliding keyboard, laminated plywood top
+43|TW|3934|TW Typist chair, plastic seat only
+43|TW|5489|TW Screen with cloth fitted 180x180 cm
+43|TW|5409|TW Students table 75x45x75 cm (plain)
+43|TW|7483|TW Bed side locker 40x40x75 cm
+44|TW|38937|TW Senior officers table 180x90x75 cm
+44|TW|32622|TW Officers table 150x90x75 cm
+44|TW|5116|TW Mosquito net frame, single cot
+44|TW|5248|TW Mosquito net frame, double cot
+44|TW|14636|TW Judicial police box 78x46x53 cm
+44|TW|6353|TW Jefferson type chair, one fixed plank arm, cushion seat and back (2" cushion)
+44|TW|7317|TW Jefferson type chair, fixed plank arm, reaper stand, 2" cushioned seat and back
+44|TW|8314|TW TV stand with 2 reaper partition and ply-mica top 75x60x60 cm
+44|TW|21859|TW Podium 120x60x40 cm
+44|TW|18167|TW Judges chair, cushioned seat and back, Ex. type
+44|TW|3865|TW Dining chair, plank seat and reaper back
+44|TW|6544|TW Dining chair, 2" cushioned seat and back
+44|TW|4425|TW Dining chair, 2" cushioned seat and reaper back
+44|TW|31774|TW Dining table, glass top Ex. type 120x75x75 cm
+44|TW|9698|TW Teapoy, plywood mica top 90x60x45 cm
+44|TW|25987|TW Dressing table 180x75 cm, cupboard and rack
+44|TW|13833|TW Table, carved leg type 90x90x75 cm
+44|TW|4334|TW Foot rest 50x50x40 cm
+44|TW|1738|TW Letter box 40x30x20 cm
+45|AW|3393|AW Bench 180x30x45 cm (plank leg)
+45|AW|4428|AW Desk 180x42.5x75 cm
+45|AW|2418|AW Armless chair, ratten seat and back
+45|AW|792|AW Tray 40x30x10 cm
+45|AW|5014|AW S.D. table 90x60x75 cm (planks)
+45|AW|7437|AW D.D. table 120x75x75 cm
+45|AW|5892|AW Black board with stand 120x90 cm
+45|AW|1827|AW Stool 45x45x45 cm
+45|AW|3547|AW Plain table 90x60x75 cm
+45|AW|16330|AW Almirah 180x90x40 cm
+45|AW|20616|AW Almirah 180x90x45 cm
+45|AW|12848|AW Rack 180x180x45 cm
+45|AW|8718|AW Plain table 180x90x75 cm
+45|AW|18643|AW Almirah 180x90x45 cm, 4 compartments and glass shutters
+45|AW|4085|AW Bench 180x45x45 cm (4 legs)
+45|AW|1495|AW Stool 40x40x45 cm
+45|AW|6627|AW Cushion chair
+45|AW|11468|AW Reaper rack 180x180x45 cm
+45|AW|5818|AW Bench with back rest 180x40x90 cm
+45|AW|3195|AW Typist chair (rattened seat and back)
+46|AW|6850|AW Typist table 105x70x70 cm (plain)
+46|AW|11644|AW Junior officers table 120x75x75 cm, one drawer and one cupboard
+46|AW|2504|AW Armless chair, plank seat and reaper back
+46|AW|4718|AW Jefferson chair, plank seat and back, 1 fixed arm plank
+46|AW|6210|AW Notice board 120x90x10 cm, glass shutter
+46|AW|19406|AW Almirah 180x90x45 cm, 4 comps, laminated plywood shutter
+46|AW|12938|AW Almirah 120x90x40 cm, 4 comps, laminated plywood shutter
+46|AW|1624|AW Stool 35x35x50 cm
+46|AW|1863|AW Stool 40x40x50 cm
+46|AW|1882|AW Drawing stool 40x40x60 cm
+46|AW|7710|AW Cot 180x75x45 cm, plywood on top
+46|AW|3249|AW Cloth stand 105x90x40 cm, aluminium rod fittings
+46|AW|14035|AW Medicine rack 180x180x45 cm (5 compts of plank and side partitions)
+46|AW|8057|AW Dining table 180x90x75 cm, laminated plywood top
+46|AW|8408|AW Lecture stand 120x60x40 cm
+46|AW|4322|AW Plain table 120x60x75 cm
+46|AW|5803|AW Slope desk 180x45x75 cm, with shelf
+46|AW|4387|AW Slope desk 65x50x80/70 cm, shelf and top folding
+46|AW|2445|AW Typist chair, plastic seat only
+46|AW|3346|AW Screen with cloth fitted 180x180 cm
+46|AW|2358|AW Students table 75x45x75 cm (plain)
+46|AW|5148|AW Bed side locker 40x40x75 cm
+47|AW|4737|AW Record rack (reaper) 90x90x45 cm
+47|AW|18151|AW Almirah 180x90x45 cm, 5 comps and glass shutter
+47|AW|1795|AW Baby bench 150x25x30 cm
+47|AW|14504|AW Almirah 120x90x40 cm, 4 comps and plank shutter
+47|AW|6085|AW Computer table 90x60x75 cm, sliding keyboard, laminated plywood top
+47|AW|6679|AW Reaper rack 180x90x45 cm, 5 shelves
+47|AW|9721|AW Reading table 180x60x75 cm, plywood laminated sheet top
+47|AW|4450|AW Map stand 120x90x40 cm
+47|AW|3339|AW Students table 75x45x75 cm, with bottom shelf
+47|AW|8034|AW Cot 180x75x45 cm, plank on top
+47|HW|3457|HW Bench 180x30x45 cm (plank leg)
+47|HW|4443|HW Desk 180x42.5x75 cm (listed as 80x42.5x75 in PDF)
+47|HW|2622|HW Armless chair, ratten seat and back
+47|HW|844|HW Tray 40x30x10 cm
+47|HW|5522|HW S.D. table 90x60x75 cm (planks)
+47|HW|8258|HW D.D. table 120x75x75 cm
+47|HW|7650|HW Black board with stand 120x90 cm
+47|HW|2209|HW Stool 45x45x45 cm
+48|HW|3894|HW Plain table 90x60x75 cm
+48|HW|17634|HW Almirah 180x90x40 cm
+48|HW|18195|HW Almirah 180x90x45 cm
+48|HW|14736|HW Rack 180x180x45 cm
+48|HW|9731|HW Plain table 180x90x75 cm
+48|HW|20602|HW Almirah 180x90x45 cm, 4 comps and glass shutters
+48|HW|4212|HW Bench 180x45x45 cm (4 legs)
+48|HW|1651|HW Stool 40x40x45 cm
+48|HW|8119|HW Cushion chair
+48|HW|11803|HW Reaper rack 180x180x45 cm
+48|HW|5995|HW Bench with back rest 180x40x90 cm
+48|HW|3245|HW Typist chair (rattened seat and back)
+48|HW|6919|HW Typist table 105x70x70 cm
+48|HW|13691|HW Junior officers table 120x75x75 cm, one drawer and one cupboard
+48|HW|2640|HW Armless chair, plank seat and reaper back
+48|HW|4801|HW Jefferson chair, plank seat and back, 1 fixed arm plank
+48|HW|7813|HW Notice board 120x90x10 cm, glass shutter
+48|HW|20037|HW Almirah 180x90x45 cm, 4 comps, laminated plywood shutter
+48|HW|14710|HW Almirah 120x90x40 cm, 4 comps, laminated plywood shutter
+48|HW|1656|HW Stool 35x35x50 cm
+48|HW|1907|HW Stool 40x40x50 cm
+48|HW|2043|HW Drawing stool 40x40x60 cm
+49|HW|7787|HW Cot 180x75x45 cm, plywood on top
+49|HW|3299|HW Cloth stand 105x90x40 cm, aluminium rod fittings
+49|HW|18617|HW Medicine rack 180x180x45 cm (5 compts of plank and side partitions)
+49|HW|8157|HW Dining table 180x90x75 cm, laminated plywood top
+49|HW|8612|HW Lecture stand 120x60x40 cm
+49|HW|4457|HW Plain table 120x60x75 cm
+49|HW|6773|HW Slope desk 180x45x75 cm, with shelf
+49|HW|4495|HW Slope desk 65x50x80/70 cm, shelf and top folding
+49|HW|2502|HW Typist chair, plastic seat only
+49|HW|3429|HW Screen with cloth fitted 180x180 cm
+49|HW|2853|HW Students table 75x45x75 cm (plain)
+49|HW|5187|HW Bed side locker 40x40x75 cm
+49|HW|5231|HW Record rack (reaper) 90x90x45 cm
+49|HW|21813|HW Almirah 180x90x45 cm, 5 comps and glass shutter
+49|HW|2145|HW Baby bench 150x25x30 cm
+49|HW|15406|HW Almirah 120x90x40 cm, 4 comps and plank shutter
+49|HW|6266|HW Computer table 90x60x75 cm, sliding keyboard, laminated plywood top
+49|HW|8097|HW Reaper rack 180x90x45 cm, 5 shelves
+49|HW|8491|HW Reading table 180x60x75 cm, plywood laminated sheet top
+49|HW|4912|HW Map stand 120x90x40 cm
+49|HW|4567|HW Students table 75x45x75 cm, with bottom shelf
+49|HW|8115|HW Cot 180x75x45 cm, plank on top
+50|G20|9901|Steel cabinet with locker, 4 shelves 78"x36"x19" (20G)
+50|G20|9391|Steel cabinet with 4 fixed shelves 78"x36"x19" (20G)
+50|G20|10345|Steel cabinet with 4 fixed shelves and glass door 78"x36"x19" (20G)
+50|G20|7465|Steel cabinet with 3 fixed shelves 66"x33"x18" (20G)
+50|G20|6503|Steel cabinet with 3 fixed shelves 50"x30"x17" (20G)
+50|G20|6991|Steel table, 3 drawer right side, cupboard left, Novapan top 60"x36"x30" (20G)
+50|G20|8709|Steel table, 3 drawer right, cupboard with shelf left, 18mm Novapan top 72"x36"x30" (20G)
+50|G20|7828|Steel table, drawer right, cupboard left, Novapan top 54"x30"x30" (20G)
+50|G20|5440|Steel table, 3 drawer right or one drawer and cupboard, 18mm Novapan top 48"x24"x30" (20G)
+50|G20|4419|Steel table, 3 drawers, one drawer and cupboard right, Novapan top 36"x18"x30" (20G)
+50|G20|8146|Steel table, 3 drawers right, cupboard left, Novapan top 60"x30"x30" (20G) CR sheet
+50|G20|11817|Steel book shelf 4mm glass door with locker 66"x33"x12" (20G)
+51|G20|10604|Steel filing cabinet 48"x24"x20" (20G)
+51|G20|5066|Steel slotted angle rack 72"x36"x56", 6 pannel (20G)
+51|G20|2712|Steel slotted angle rack 36"x36"x15" (20G)
+51|G20|7654|Steel computer table with keyboard, 18mm Novapan top, steel cupboard 4'x2'x2.5' (20G)
+51|G20|10201|Steel computer table with keyboard, 18mm Novapan top, steel cupboard 4'x2.5'x2.5' (20G)
+51|G20|19938|Industrial locker 12 pigeon hole 78"x36"x19" (20G)
+51|G22|9555|Steel cabinet with locker, 4 shelves 78"x36"x19" (22G, 65 Kg)
+51|G22|8984|Steel cabinet with 4 fixed shelves 78"x36"x19" (22G, 64 Kg)
+51|G22|10989|Steel cabinet with 4 fixed shelves and glass door 78"x36"x19" (22G, 64 Kg)
+51|G22|7194|Steel cabinet with 3 fixed shelves 66"x33"x18" (22G, 50 Kg)
+51|G22|6260|Steel cabinet with 3 fixed shelves 50"x30"x17" (22G, 42 Kg)
+51|G22|7404|Steel table, 3 drawer right, cupboard left, Novapan top 60"x36"x30" (22G, 24 Kg)
+51|G22|9089|Steel table, 3 drawer right, cupboard with shelf left, 18mm Novapan top 72"x36"x30" (22G, 28 Kg)
+52|G22|7007|Steel table, drawer right, cupboard left, Novapan top 54"x30"x30" (22G, 20 Kg)
+52|G22|5611|Steel table, 3 drawer right or one drawer and cupboard, 18mm Novapan top 48"x24"x30" (22G, 20 Kg)
+52|G22|3958|Steel table, 3 drawers, one drawer and cupboard right, Novapan top 36"x18"x30" (22G, 12 Kg)
+52|G22|1578|Full arm chair, plastic seat and back, ordinary wood, 1" steel pipe 6 Mtr
+52|G22|2251|Full arm chair, plastic rattened seat and back, teak wood frame, 1" pipe 6 Mtr
+52|G22|1511|Half arm chair, plastic rattened seat and back (ordinary wood), 1" pipe 5.5 Mtr
+52|G22|1379|Armless chair, plastic rattened seat and back (ordinary wood), 1" pipe 4.5 Mtr
+52|G22|2184|S type steel arm chair, teak wood frame, seat and back rattened, 1" pipe 5.5 Mtr
+52|G22|1945|S type steel armless chair, teak wood frame, plastic rattened seat and back, 1" pipe 4.5 Mtr
+52|G22|7224|Steel table, 3 drawers right, cupboard left, Novapan top 60"x30"x30" (22G, 24 Kg)
+52|G22|1957|Steel Jefferson chair with wooden writing pad, 1" steel pipe 6.5 Mtr
+52|G22|2456|Steel Jefferson chair with wooden writing pad and side box (22G)
+52|G22|9981|Steel book shelf 4mm glass door with locker 66"x33"x12" (22G, 57 Kg)
+52|G22|1557|Steel stool with stainless steel top 30cm x 30cm
+52|G22|11589|Steel filing cabinet 48"x24"x20" (22G, 47 Kg)
+53|G22|4466|Steel slotted angle rack 72"x36"x15", 6 pannels (22G, 20 Kg)
+53|G22|2413|Steel slotted angle rack 36"x36"x15" (22G, 10 Kg)
+53|G22|7156|Steel computer table with keyboard, 18mm Novapan top, steel cupboard 4'x2'x2.5' (22G)
+53|G22|9274|Steel computer table with keyboard, 18mm Novapan top, steel cupboard 4'x2.5'x2.5' (22G, 21 Kg)
+53|G22|3563|Computer chair without arm, revolving, manual lifting, cushion seat and back
+53|G22|3905|Computer chair with arm, revolving, manual lifting, cushion seat and back (plastic type)
+53|G22|8416|Computer chair special type, push back, manual lifting with arm
+53|G22|9897|High back revolving chair, hydraulic lift, cushion seat and back
+53|G22|4376|Revolving chair with plastic rattened seat and back
+53|G22|17078|Industrial locker 12 pigeon hole 78"x36"x19" (22G, 66 Kg)
+53|G22|5580|Steel wooden desk 180x40x75 cm, MS angle iron leg and frame, Anjili/hardwood plank top
+53|G22|4532|Steel wooden bench 180x30x45 cm, MS angle iron, Anjili/hardwood plank top
+53|G22|4417|Steel wooden plain table 90x60x75 cm, MS angle iron, Anjili/hardwood plank top
+53|G22|5508|Steel wooden plain table 120x60x75 cm, MS angle iron, Anjili/hardwood plank top
+53|G22|7163|Steel wooden bench with back rest 180x30x45 cm, MS angle iron, Anjili/hardwood plank seat
+53|G22|7918|Steel wooden desk with book rack 180x40x75 cm, MS angle iron, Anjili/hardwood plank top
+54|G22|4458|Steel wooden baby bench 180x25x40 cm, MS angle iron, Anjili/hardwood plank seat
+54|G22|10851|Steel wooden combined desk and bench 90x35x60 - 90x25x40 cm
+54|G22|14540|Steel storage container with lid (waste bin) 120x60x60 cm, GI sheet
+54|G22|9003|Steel food container with stand 90x60x60 cm
+54|G22|10720|Steel food container with stand 120x60x60 cm
+54|G22|9702|Steel two seated swing 210x180x4 cm, GI pipe frame
+54|G22|37696|Steel merry go round, 4 seat, angle iron and GI pipe
+54|G22|52761|Steel merry go round, 6 seat, angle iron and GI pipe
+54|G22|13401|Sea saw 3 meter length, angle iron, GI pipe and sheet
+54|G22|52080|Steel slider, angle iron, GI pipe and sheet
+54|G22|12890|Steel bulletin board with stand 90x60 cm
+54|G22|10215|Steel plain bulletin board (hanging type) 90x60 cm
+54|G22|16404|Steel bulletin board with stand 120x60 cm
+54|G22|11748|Steel plain bulletin board (hanging type) 120x60 cm
+54|G22|2573|Plant guard 60 cm dia, 1.5 mtr height, steel rod and GI mesh`;
+const GL={T23:'Teak (2023 order)',H23:'Hardwood (2023 order)',S23:'Steel (2023 order)',C23:'Smart classroom (2023 order)',M23:'Steel hospital (2023 order)',P23:'Hospital powder coated (2023 order)',TW:'Teak (older list)',AW:'Anjili wood (older list)',HW:'Hardwood (older list)',G20:'Steel 20G (older list)',G22:'Steel 22G / steel-wood (older list)'};
+const EXP={TW:'Teak wood',AW:'Anjili wood',HW:'Hardwood'};
+const RATES=RAW.split('\n').map(l=>{const a=l.split('|'),g=a[1];let n=a.slice(3).join('|');if(EXP[g])n=n.replace(/^(TW|AW|HW) /,EXP[g]+' ');return{p:+a[0],g,r:+a[2],n,s:(n+' '+GL[g]).toLowerCase()}});
+function find(q,max,g){const t=q.toLowerCase().split(/\s+/).filter(Boolean),out=[];for(const x of RATES){if(g&&x.g!==g)continue;if(t.every(w=>x.s.includes(w)||String(x.r)===w)){out.push(x);if(out.length>=max)break}}return out}
+function offRate(x){const g=+$('gst').value||0;return($('incl').checked&&type!=='Estimate')?Math.round(x.r*(1+g/100)):x.r}
+function applyOff(i,x){const it=items[i];if(!it)return;it.d=x.n;it.r=offRate(x);it.u=/sq\.?ft/i.test(x.n)?'sq.ft':(it.u||'nos');if(!it.q)it.q=1;render()}
+let rtTarget=null;
+function showRates(){const q=$('rq').value.trim(),g=$('rg').value;let l=q?find(q,100,g):RATES.filter(x=>!g||x.g===g).slice(0,100);
+ $('rl').innerHTML=l.map(x=>'<div class="ri"><div><b>'+esc(x.n)+'</b><span>'+GL[x.g]+' · PDF page '+x.p+'</span></div><div class="pr">₹'+x.r.toLocaleString('en-IN')+'</div><button class="btn" data-ri="'+RATES.indexOf(x)+'">Add</button></div>').join('')||'<div class="rtn">No match. Try fewer words, for example "desk 180".</div>'}
+function openRates(i){rtTarget=i;if(!$('rg').options.length)$('rg').innerHTML='<option value="">All lists</option>'+Object.keys(GL).map(k=>'<option value="'+k+'">'+GL[k]+'</option>').join('');
+ const inc=$('incl').checked&&type!=='Estimate';$('rnote').textContent='Official rates exclude duties, taxes and transport. '+(inc?'This document includes GST in rates, so '+($('gst').value||0)+'% GST is added to the rate you pick. ':'')+'The older lists are undated, so check they still apply.'+kadcoNote();
+ $('rtov').hidden=false;showRates();$('rq').focus()}
+$('rq').oninput=showRates;$('rg').onchange=showRates;$('rdone').onclick=()=>{$('rtov').hidden=true};
+$('rl').onclick=e=>{const k=e.target.dataset.ri;if(k==null)return;const x=RATES[k];
+ if(document.body.classList.contains('home')){type='Quotation';fresh();document.body.classList.remove('home')}
+ let i=rtTarget;if(i==null||!items[i]){if(items.length===1&&!items[0].d&&!items[0].r)i=0;else{items.push({d:'',u:'nos',q:1,r:0});i=items.length-1}}
+ applyOff(i,x);if(rtTarget!=null){rtTarget=null;$('rtov').hidden=true}else{e.target.textContent='Added';setTimeout(()=>e.target.textContent='Add',1200)}};
+$('orates').onclick=()=>openRates(null);
+$('rows').addEventListener('click',e=>{const i=e.target.dataset.ofc;if(i!=null)openRates(+i)});
+const sg=$('sug');
+function sug(t,i){const q=t.value.trim();if(q.length<3){sg.hidden=true;return}const m=find(q,6);if(!m.length){sg.hidden=true;return}
+ const r=t.getBoundingClientRect();sg.style.left=Math.max(4,r.left)+'px';sg.style.top=(r.bottom+2)+'px';sg.style.width=Math.min(innerWidth-8,Math.max(r.width,280))+'px';
+ sg.innerHTML='<div style="font-size:11px;color:#666;padding:4px 9px">Official rate list: tap to fill the name and rate</div>'+m.map((x,j)=>'<div data-j="'+j+'">'+esc(x.n)+'<span>₹'+x.r.toLocaleString('en-IN')+' · '+GL[x.g]+' · p.'+x.p+'</span></div>').join('');sg._m=m;sg._i=i;sg.hidden=false}
+sg.addEventListener('pointerdown',e=>{const d=e.target.closest('[data-j]');if(!d)return;e.preventDefault();applyOff(sg._i,sg._m[d.dataset.j]);sg.hidden=true});
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('#sug')&&!(e.target.dataset&&e.target.dataset.k==='d'))sg.hidden=true});
+addEventListener('scroll',()=>{sg.hidden=true},true);
+function homeList(){const all=store.get('vk_docs',[]).sort((a,b)=>(b.updated||b.id)-(a.updated||a.id)),dr=all.filter(d=>d.status==='draft'),hd=$('hdraft');
+ if(dr.length){hd.hidden=false;hd.innerHTML='Continue draft<small>'+esc(dr[0].num)+' · '+esc(dr[0].f.cname||'No customer')+(dr.length>1?' (+'+(dr.length-1)+' more drafts)':'')+'</small>';hd.dataset.id=dr[0].id}else hd.hidden=true;
+ $('hlist').innerHTML=all.slice(0,5).map(d=>'<div class="hrow"><span><b>'+esc(d.num)+'</b> '+esc(ttn[d.type]||d.type)+(d.status==='draft'?' <em class="bd">Draft</em>':'')+' · '+esc(d.f.cname||'No name')+'</span><button data-ho="'+d.id+'">Open</button></div>').join('')||'<div style="color:#888;text-align:left;font-size:14px">No saved documents yet</div>'}
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{flushNow();type=b.dataset.go;fresh();document.body.classList.remove('home');scrollTo(0,0)});
+document.querySelectorAll('[data-rates]').forEach(b=>b.onclick=()=>openRates(null));document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>{if(b.dataset.nav==='recent')openDocs();else scrollTo({top:0,behavior:'smooth'})});
+$('hres').onclick=()=>{document.body.classList.remove('home');scrollTo(0,0)};
+$('homebtn').onclick=()=>{flushNow();homeList();$('hres').hidden=false;document.body.classList.add('home');scrollTo(0,0)};
+$('hlist').onclick=e=>{const o=e.target.dataset.ho;if(o){const d=store.get('vk_docs',[]).find(x=>String(x.id)===o);if(d){load(d);document.body.classList.remove('home')}}};
+
+/* ===== storage, drafts, documents, backup (local phone storage only) ===== */
+const ttn={Quotation:'Quotation',Estimate:'Estimate',Invoice:'Bill'};
+function fresh(){q++;try{_fresh()}finally{q--}}
+function load(d){q++;try{_load(d)}finally{q--}}
+function ind(t,bad){const e=$('saveind');if(!e)return;e.textContent=t;e.className='sind noprint'+(bad?' bad':'')}
+function meaningful(){return items.some(i=>(i.d||'').trim()||i.r>0)}
+function touch(){if(q||!ready)return;clearTimeout(tm);if(meaningful()){ind('Saving…');tm=setTimeout(()=>autosave(false),700)}}
+function flushNow(){if(tm){clearTimeout(tm);tm=null;autosave(false)}}
+function autosave(final){tm=null;if(!ready||!meaningful())return false;
+ const all=store.get('vk_docs',[]),i=cur?all.findIndex(x=>x.id===cur):-1,prev=i>=0?all[i]:null;
+ if(!prev&&$('num').value===nextNum())$('num').value=allocNum(type);
+ const d=snap();d.updated=Date.now();d.status=final?'final':(prev?(prev.status||'final'):'draft');
+ if(i>=0)all[i]=d;else all.unshift(d);
+ cur=d.id;store.set('vk_docs',all);
+ store.set('vk_seller3',Object.fromEntries(['sname','saddr','sphone','sgst','semail'].map(k=>[k,$(k).value])));
+ const dup=all.some(x=>x.id!==d.id&&x.num===d.num);
+ ind((d.status==='draft'?'Draft · ':'')+(dup?'Duplicate number! ':'')+'Saved '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}),dup);
+ return true}
+document.addEventListener('input',e=>{if(e.target.closest&&e.target.closest('#sheet,.opts'))touch()});
+document.addEventListener('change',e=>{if(e.target.closest&&e.target.closest('#sheet,.opts'))touch()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)flushNow()});
+addEventListener('pagehide',flushNow);
+/* saving / sharing files: Claude page, Android app, plain browser */
+async function saveFile(name,blob){const Cp=window.Capacitor;
+ if(Cp&&Cp.isNativePlatform&&Cp.isNativePlatform()){
+  const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result).split(',')[1]);r.onerror=()=>rej(new Error('Could not read the file'));r.readAsDataURL(blob)});
+  const w=await Cp.Plugins.Filesystem.writeFile({path:name,data:b64,directory:'CACHE'});
+  await Cp.Plugins.Share.share({title:name,url:w.uri,dialogTitle:'Save or share'});
+ }else if(window.claude){const dl=await claude.use('downloads');if(!dl)throw new Error('Direct download is not available in this view.');await dl.save({filename:name,data:blob})}
+ else{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000)}}
+/* documents screen */
+function renderDocs(){const qs=$('dq').value.trim().toLowerCase(),t=$('dt').value,st=$('ds').value,o=$('do').value;
+ const a=store.get('vk_docs',[]).filter(d=>(!t||d.type===t)&&(!st||(d.status||'final')===st)&&(!qs||((d.num||'')+' '+(d.f.cname||'')+' '+(d.f.ref||'')).toLowerCase().includes(qs)));
+ a.sort((x,y)=>(o==='old'?1:-1)*((x.updated||x.id)-(y.updated||y.id)));
+ $('dl').innerHTML=a.map(d=>'<div class="ri di"><div><b>'+esc(d.num)+'</b> <em class="bd'+((d.status||'final')==='draft'?'':' ok')+'">'+((d.status||'final')==='draft'?'Draft':'Completed')+'</em><span>'+esc(ttn[d.type]||d.type)+' · '+esc(d.f.cname||'No customer')+' · '+esc((d.date||'').split('-').reverse().join('/'))+(d.total?' · ₹'+fmt(d.total):'')+'</span></div><div class="da"><button class="btn" data-dop="'+d.id+'">Open</button><button class="btn ghost" data-ddup="'+d.id+'">Duplicate</button><button class="btn ghost" data-ddel="'+d.id+'">Delete</button></div></div>').join('')||'<div class="rtn">No documents found.</div>';
+ $('dcount').textContent=a.length+' of '+store.get('vk_docs',[]).length+' documents'}
+function openDocs(){$('docov').hidden=false;renderDocs()}
+['dq','dt','ds','do'].forEach(i=>{$(i).oninput=renderDocs;$(i).onchange=renderDocs});
+$('ddone').onclick=()=>{$('docov').hidden=true};
+$('dl').onclick=e=>{const o=e.target.dataset.dop,u=e.target.dataset.ddup,r=e.target.dataset.ddel,all=store.get('vk_docs',[]),d=all.find(x=>String(x.id)===(o||u||r));if(!d)return;
+ if(o){flushNow();load(d);$('docov').hidden=true;document.body.classList.remove('home');scrollTo(0,0)}
+ if(u){flushNow();const n=JSON.parse(JSON.stringify(d));n.id=Date.now();n.status='draft';n.num=allocNum(d.type);n.updated=Date.now();n.date=new Date().toISOString().slice(0,10);store.set('vk_docs',[n,...store.get('vk_docs',[])]);load(n);$('docov').hidden=true;document.body.classList.remove('home');scrollTo(0,0);ind('Draft copy created')}
+ if(r&&confirm('Delete '+d.num+' ('+(ttn[d.type]||d.type)+', '+(d.f.cname||'no customer')+')? This cannot be undone.')){store.set('vk_docs',all.filter(x=>x.id!==d.id));if(cur===d.id){cur=null;fresh()}renderDocs();homeList()}};
+$('hall').onclick=openDocs;
+$('hdraft').onclick=()=>{const d=store.get('vk_docs',[]).find(x=>String(x.id)===$('hdraft').dataset.id);if(d){load(d);document.body.classList.remove('home');scrollTo(0,0)}};
+/* backup and restore (the KADCO rate database is never included or changed) */
+function buildBackup(){const m=store.metaAll(),counters={};for(const k in m)if(k.startsWith('vk_count_'))counters[k]=m[k];
+ return{app:'vasthu-kala-billing',version:1,exported:new Date().toISOString(),docs:store.get('vk_docs',[]),customers:store.get('vk_cust',[]),counters,settings:{seller:m.vk_seller3||null,theme:m.vk_theme||null}}}
+async function exportBackup(tag){const b=buildBackup(),name='VasthuKala-'+(tag||'backup')+'-'+new Date().toISOString().slice(0,10)+'.json';
+ await saveFile(name,new Blob([JSON.stringify(b,null,1)],{type:'application/json'}));return b}
+function validBackup(b){return b&&typeof b==='object'&&b.app==='vasthu-kala-billing'&&typeof b.version==='number'&&b.version<=1&&Array.isArray(b.docs)&&b.docs.every(d=>d&&d.id!=null&&Array.isArray(d.items)&&d.f&&typeof d.f==='object')&&(b.customers===undefined||(Array.isArray(b.customers)&&b.customers.every(c=>c&&c.n)))}
+function applyBackup(b,replace){const cur0=store.get('vk_docs',[]),ids=new Set(cur0.map(d=>d.id));let added=0,skipped=0;
+ let docs=replace?b.docs.slice():cur0.slice();
+ if(!replace)for(const d of b.docs){if(ids.has(d.id))skipped++;else{docs.push(d);added++}}else added=b.docs.length;
+ store.set('vk_docs',docs);
+ const cs=replace?[]:store.get('vk_cust',[]),names=new Set(cs.map(c=>c.n));for(const c of(b.customers||[]))if(!names.has(c.n)){cs.push(c);names.add(c.n)}
+ store.set('vk_cust',cs);
+ const m=store.metaAll();for(const k in(b.counters||{}))if(/^vk_count_/.test(k)){const v=Math.max(+b.counters[k]||0,+m[k]||0);if(v!==m[k])store.set(k,v)}
+ for(const t of['Quotation','Estimate','Invoice']){const mx=Math.max(0,...docs.filter(d=>d.type===t).map(d=>seqOf(d.num)));if(mx>store.get('vk_count_'+t,0))store.set('vk_count_'+t,mx)}
+ const st=b.settings||{};if(st.seller&&(replace||!m.vk_seller3))store.set('vk_seller3',st.seller);if(st.theme&&(replace||!m.vk_theme))store.set('vk_theme',st.theme);
+ return{added,skipped}}
+$('bkp').onclick=async()=>{try{const b=await exportBackup();$('bkmsg').textContent='Backup ready: '+b.docs.length+' documents, '+b.customers.length+' customers.'}catch(e){if(!e||!/cancel/i.test(String(e.message||e)))$('bkmsg').textContent='Backup failed: '+((e&&e.message)||e)}};
+$('rst').onclick=()=>$('rstf').click();
+$('rstf').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;const m=$('bkmsg');let b;
+ try{b=JSON.parse(await f.text())}catch(x){m.textContent='This file is not a valid backup (it could not be read).';return}
+ if(!validBackup(b)){m.textContent='This is not a valid Vasthu Kala backup file, or it is from a newer app version. Nothing was changed.';return}
+ const info=b.docs.length+' documents and '+(b.customers||[]).length+' customers (exported '+String(b.exported||'').slice(0,10)+')';
+ if(confirm('Backup file: '+info+'.\n\nOK = MERGE: adds documents and customers that are missing on this phone and keeps everything you already have.\nCancel = other options.')){
+  const r=applyBackup(b,false);m.textContent='Merged. Added '+r.added+' documents, skipped '+r.skipped+' already on this phone.';renderDocs();homeList();return}
+ if(confirm('REPLACE everything on this phone with the backup?\n\nAll current documents and customers will be replaced by the backup. A safety copy of your current data will be saved first.\n\nOK = Replace, Cancel = stop.')){
+  try{await exportBackup('before-restore')}catch(x){if(!confirm('The safety copy could not be saved. Replace anyway?'))return}
+  const r=applyBackup(b,true);cur=null;fresh();m.textContent='Replaced. '+r.added+' documents restored.';renderDocs();homeList()}else m.textContent='Restore cancelled. Nothing was changed.'};
+/* KADCO data is read-only: frozen and checksum-verified */
+const KADCO_SHA='87ec09bc5a29ac92975ba972fc7641ef67a3bfa8e9838bc9d8739907ba730c17';
+function kadcoNote(){return kadcoOK===true?' Database check: unchanged.':kadcoOK===false?' WARNING: the built-in rate data does not match the original.':''}
+async function checkKadco(){try{Object.freeze(RATES);RATES.forEach(x=>Object.freeze(x));const h=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(RAW));kadcoOK=[...new Uint8Array(h)].map(b=>b.toString(16).padStart(2,'0')).join('')===KADCO_SHA}catch(e){}}
+/* start-up: open storage, migrate old data safely, restore drafts */
+async function migrate(){if(C.meta.migrated_v1)return;
+ const g=k=>{const v=localStorage.getItem(k);if(v===null)return null;return JSON.parse(v)};
+ const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(/^vk_(docs|cust|count_|seller3|theme)/.test(k))keys.push(k)}
+ const ops=[],want={docs:[],customers:[]};
+ if(keys.length){
+  const have=new Set(C.docs.map(d=>d.id)),hc=new Set(C.customers.map(c=>c.n));
+  for(const k of keys){const v=g(k);if(k==='vk_docs'){(Array.isArray(v)?v:[]).forEach(d=>{if(d&&d.id!=null){want.docs.push(d.id);if(!have.has(d.id))ops.push(['docs','put',d])}})}
+   else if(k==='vk_cust'){(Array.isArray(v)?v:[]).forEach(c=>{if(c&&c.n){want.customers.push(c.n);if(!hc.has(c.n))ops.push(['customers','put',c])}})}
+   else if(!(k in C.meta)||(/^vk_count_/.test(k)&&+v>+C.meta[k]))ops.push(['meta','put',{k,v}])}
+  if(ops.length)await IDB.tx(ops);
+  const d2=new Set((await IDB.all('docs')).map(d=>d.id)),c2=new Set((await IDB.all('customers')).map(c=>c.n));
+  if(!want.docs.every(i=>d2.has(i))||!want.customers.every(n=>c2.has(n)))throw new Error('verification failed');
+  C.docs=await IDB.all('docs');C.customers=await IDB.all('customers');(await IDB.all('meta')).forEach(r=>C.meta[r.k]=r.v)}
+ const rec={k:'migrated_v1',v:{at:new Date().toISOString(),documents:want.docs.length,customers:want.customers.length}};await IDB.tx([['meta','put',rec]]);C.meta.migrated_v1=rec.v}
+async function boot(){
+ try{await IDB.open();C.docs=await IDB.all('docs');C.customers=await IDB.all('customers');(await IDB.all('meta')).forEach(r=>C.meta[r.k]=r.v);
+  try{await migrate();MODE='idb'}catch(e){MODE='ls';ind('Could not move your saved data to the new storage ('+((e&&e.message)||e)+'). Your original data is untouched and still in use.',true)}}
+ catch(e){MODE='ls';ind('Using basic storage: '+((e&&e.message)||e),true)}
+ try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
+ applyPrefs();fillPick();fresh();list();homeList();checkKadco();ready=true}
+
+boot();
+</script>
+</body>
+</html>
